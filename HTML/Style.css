@@ -1,0 +1,147 @@
+*{
+     margin:0; 
+     padding:0;
+     box-sizing: border-box;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+
+    background-color: #111;
+color: #fff;
+line-height: 1.6;
+
+}
+
+:root {
+
+    --neon-orange: #ff6b00;
+    --tactical-grey: #2a2a2a;
+  --text-muted: #888888;
+}
+
+main{
+    padding: 40px 20px;
+    max-width: 1200px;
+
+}
+
+.game-grid{
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 30px;
+}
+
+.game-card{
+    background-color: var(--tactical-grey);
+    border: 1px solid #444;
+    border-radius: 8px;
+    overflow: hidden;
+
+}
+
+.game-card img {
+
+      width: 100%;
+  aspect-ratio: 16 / 9; /* Le da el formato exacto de pantalla/banner de videojuegos */
+  object-fit: cover; /* Vuelve a llenar todo el espacio */
+  object-position: top; /* Mantiene los logos y cabezas siempre visibles */
+  display: block;
+}
+
+
+.game-card .card-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-content{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12PX
+    ;
+
+}
+
+.game-badge {
+
+    display: block;
+    width: fit-content;
+    margin: -15px auto 10px auto;
+
+
+    background-color: var(--neon-orange);
+    color: #111;
+    padding: 4px 15px;
+    font-weight: bold;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    border-radius: 20px;
+    position: relative;
+    z-index: 2;
+
+
+}
+
+.card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 10px;
+
+}
+
+.tag{
+
+    background-color: #1a1a1a;
+    color: var(--text-muted);
+    border: 1px solid #444d;
+    font-size: 0.75rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+
+}
+
+.card-footer{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    padding-top: 12px;
+    border-top: 1px solid #444;
+
+}
+
+.card.metric{
+
+    font-size: 0.85rem;
+
+}
+
+.btn-card{
+
+    background-color: transparent;
+    color: var(--neon-orange);
+    border: 1px solid var(--neon-orange);
+    padding: 6px 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: bold;
+    transition: all 0.2s ease;
+
+}
+
+.btn-card:hover{
+
+    background-color: var(--neon-orange);
+    color: #111111;
+    box-shadow: 0 0 10px rgba(255, 107, 0, .6);
+
+}

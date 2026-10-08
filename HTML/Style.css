@@ -1,81 +1,336 @@
-*{
-     margin:0; 
-     padding:0;
-     box-sizing: border-box;
-     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+:root {
+    --neon-orange: #ff6b00;
+    --tactical-grey: #2a2a2a;
+    --text-muted: #888888;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-
-    background-color: #111;
-color: #fff;
-line-height: 1.6;
-
+    background-color: #111111;
+    color: #ffffff;
+    line-height: 1.6;
 }
 
-:root {
-
-    --neon-orange: #ff6b00;
-    --tactical-grey: #2a2a2a;
-  --text-muted: #888888;
+/* =========================================
+   2. HEADER HUD
+   ========================================= */
+header {
+    background-color: #141414;
+    border-bottom: 1px solid #333333;
+    padding: 12px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(8px);
 }
 
-main{
+.brand-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.hud-indicator {
+    width: 8px;
+    height: 8px;
+    background-color: var(--neon-orange);
+    border-radius: 50%;
+    box-shadow: 0 0 8px var(--neon-orange);
+    animation: odradek-pulse 1.4s infinite ease-in-out;
+}
+
+.brand-logo {
+    width: 35px;
+    height: 35px;
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.brand-title {
+    font-size: 1.3rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: #ffffff;
+    margin: 0;
+    line-height: 1;
+}
+
+.brand-subtitle {
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    letter-spacing: 1.5px;
+    margin-top: 3px;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-left: auto;
+}
+
+.nav-link,
+.nav-link:visited {
+    color: #888888;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 5px 0;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #ffffff;
+}
+
+.nav-link.active::after,
+.nav-link:hover::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--neon-orange);
+    box-shadow: 0 0 6px var(--neon-orange);
+}
+
+.btn-login,
+.btn-login:visited {
+    color: var(--neon-orange);
+    border: 1px solid var(--neon-orange);
+    padding: 6px 14px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: all 0.2s ease;
+}
+
+.btn-login:hover {
+    background-color: var(--neon-orange);
+    color: #111111;
+    box-shadow: 0 0 10px rgba(255, 107, 0, 0.5);
+}
+
+/* =========================================
+   3. HERO BANNER CINEMATOGRÁFICO Y ESCÁNER
+   ========================================= */
+.hero-banner {
+    position: relative;
+    min-height: 480px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    overflow: hidden;
+    border-bottom: 1px solid #333333;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+    z-index: 1;
+    filter: brightness(0.6) contrast(1.1);
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        180deg,
+        rgba(20, 20, 20, 0.8) 0%,
+        rgba(17, 17, 17, 0.5) 50%,
+        #111111 100%
+    );
+    z-index: 2;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: #ffffff;
+    letter-spacing: 1.5px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
+}
+
+.hero-desc {
+    color: #dddddd;
+    font-size: 1rem;
+    margin-bottom: 30px;
+    line-height: 1.5;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
+}
+
+/* Consola de Búsqueda */
+.search-console {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgba(10, 10, 10, 0.85);
+    backdrop-filter: blur(8px);
+    border: 1px solid #444444;
+    border-radius: 6px;
+    padding: 6px 6px 6px 15px;
+    max-width: 650px;
+    width: 100%;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+}
+
+.search-console:focus-within {
+    border-color: var(--neon-orange);
+    box-shadow: 0 0 15px rgba(255, 107, 0, 0.3);
+}
+
+.search-icon {
+    width: 20px;
+    height: 20px;
+    color: var(--neon-orange);
+    margin-right: 12px;
+    flex-shrink: 0;
+}
+
+.search-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 0.9rem;
+    outline: none;
+    letter-spacing: 1px;
+}
+
+.search-input::placeholder {
+    color: #888888;
+}
+
+.btn-scan {
+    margin-left: auto;
+    background-color: var(--neon-orange);
+    color: #111111;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 0.85rem;
+    letter-spacing: 1.5px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.btn-scan:hover {
+    background-color: #ff8533;
+    box-shadow: 0 0 15px rgba(255, 107, 0, 0.6);
+}
+
+/* =========================================
+   4. CONTENIDO Y GRID DE JUEGOS
+   ========================================= */
+main {
     padding: 40px 20px;
     max-width: 1200px;
-
+    margin: 0 auto;
 }
 
-.game-grid{
+.protocol-section {
+    margin-bottom: 40px;
+}
 
+.protocol-section h1 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.protocol-section p {
+    color: #cccccc;
+}
+
+.Section-Title {
+    font-size: 1.2rem;
+    letter-spacing: 1.5px;
+    margin-bottom: 25px;
+    color: #ffffff;
+}
+
+.game-grid {
     display: grid;
-
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-gap: 30px;
+    gap: 30px;
 }
 
-.game-card{
+.game-card {
     background-color: var(--tactical-grey);
-    border: 1px solid #444;
+    border: 1px solid #444444;
     border-radius: 8px;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
 
+.card-image {
+    position: relative;
 }
 
 .game-card img {
-
-      width: 100%;
-  aspect-ratio: 16 / 9; /* Le da el formato exacto de pantalla/banner de videojuegos */
-  object-fit: cover; /* Vuelve a llenar todo el espacio */
-  object-position: top; /* Mantiene los logos y cabezas siempre visibles */
-  display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    object-position: top;
+    display: block;
 }
 
-
-.game-card .card-content {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.card-content{
+.card-content {
     padding: 20px;
     display: flex;
     flex-direction: column;
-    gap: 12PX
-    ;
-
+    gap: 12px;
+    flex-grow: 1;
 }
 
 .game-badge {
-
     display: block;
     width: fit-content;
     margin: -15px auto 10px auto;
-
-
     background-color: var(--neon-orange);
-    color: #111;
+    color: #111111;
     padding: 4px 15px;
     font-weight: bold;
     font-size: 0.85rem;
@@ -83,49 +338,45 @@ gap: 30px;
     border-radius: 20px;
     position: relative;
     z-index: 2;
-
-
 }
 
 .card-tags {
     display: flex;
     flex-wrap: wrap;
     gap: 6px;
-    margin-bottom: 10px;
-
+    margin-bottom: 5px;
 }
 
-.tag{
-
+.tag {
     background-color: #1a1a1a;
     color: var(--text-muted);
-    border: 1px solid #444d;
+    border: 1px solid #444444;
     font-size: 0.75rem;
+    padding: 3px 8px;
     border-radius: 4px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-
 }
 
-.card-footer{
+.card-excerpt {
+    color: #cccccc;
+    font-size: 0.9rem;
+}
 
+.card-footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 15px;
+    margin-top: auto;
     padding-top: 12px;
-    border-top: 1px solid #444;
-
+    border-top: 1px solid #444444;
 }
 
-.card.metric{
-
+.card-metric {
     font-size: 0.85rem;
-
 }
 
-.btn-card{
-
+.btn-card {
     background-color: transparent;
     color: var(--neon-orange);
     border: 1px solid var(--neon-orange);
@@ -135,13 +386,34 @@ gap: 30px;
     font-size: 0.85rem;
     font-weight: bold;
     transition: all 0.2s ease;
-
 }
 
-.btn-card:hover{
-
+.btn-card:hover {
     background-color: var(--neon-orange);
     color: #111111;
-    box-shadow: 0 0 10px rgba(255, 107, 0, .6);
+    box-shadow: 0 0 10px rgba(255, 107, 0, 0.6);
+}
 
+footer {
+    text-align: center;
+    padding: 25px;
+    border-top: 1px solid #333333;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+}
+
+/* =========================================
+   5. ANIMACIONES
+   ========================================= */
+@keyframes odradek-pulse {
+    0%, 100% {
+        opacity: 1;
+        box-shadow: 0 0 10px var(--neon-orange);
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.2;
+        box-shadow: 0 0 2px var(--neon-orange);
+        transform: scale(0.8);
+    }
 }

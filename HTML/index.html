@@ -11,88 +11,70 @@
 el terreno de tu videojuego favorito, Para y hecho por Gamers" />
 
 </head>
-
-
 <body>
 
 <header>
+  <div class="brand-container">
+    <!-- 1. Indicador parpadeante HUD -->
+    <span class="hud-indicator"></span>
 
-    <h1>
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="35" height="35" style="vertical-align: middle; margin-right: 8px;">
-    <circle cx="50" cy="50" r="8" fill="#ffffff" />
-    <g fill="#ff6b00">
-      <polygon points="50,10 42,28 50,22 58,28" />
-      <polygon points="90,50 72,42 78,50 72,58" />
-      <polygon points="50,90 58,72 50,78 42,72" />
-      <polygon points="10,50 28,58 22,50 28,42" />
-    </g>
-    <g stroke="#888888" stroke-width="2.5" opacity="0.8">
-      <line x1="50" y1="22" x2="50" y2="42" />
-      <line x1="78" y1="50" x2="58" y2="50" />
-      <line x1="50" y1="78" x2="50" y2="58" />
-      <line x1="22" y1="50" x2="42" y2="50" />
-    </g>
-  </svg>
-  ODRADEK
-</h1>
-    <h2>EL CODEX TACTICO DE VIDEOJUEGOS </h2>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="32" height="32" class="brand-logo" alt="Odradek">
+      <circle cx="50" cy="50" r="8" fill="#ffffff" />
+      <g fill="#ff6b00">
+        <polygon points="50,10 42,28 50,22 58,28" />
+        <polygon points="90,50 72,42 78,50 72,58" />
+        <polygon points="50,90 58,72 50,78 42,72" />
+        <polygon points="10,50 28,58 22,50 28,42" />
+      </g>
+      <g stroke="#888888" stroke-width="2.5" opacity="0.8">
+        <line x1="50" y1="22" x2="50" y2="42" />
+        <line x1="78" y1="50" x2="58" y2="50" />
+        <line x1="50" y1="78" x2="50" y2="58" />
+        <line x1="22" y1="50" x2="42" y2="50" />
+      </g>
+    </svg>
 
-<nav>
-    <a href="">INICIO</a>
-    <a href="">VIDEO JUEGOS</a>
+    <div class="brand-text">
+      <h1 class="brand-title">ODRADEK</h1>
+      <h2 class="brand-subtitle">// EL CODEX TÁCTICO DE VIDEOJUEGOS</h2>
+    </div>
+  </div>
 
-</nav>
-
-<div> 
-    <a href="">INICIAR SESIÓN</a>
-    <a href="">SUGERENCIAS</a>
-
-</div>
-
+  <nav class="nav-menu">
+    <a href="#" class="nav-link active">INICIO</a>
+    <a href="#" class="nav-link">VIDEO JUEGOS</a>
+    <a href="#" class="nav-link">SUGERENCIAS</a>
+    <a href="#" class="btn-login">INICIAR SESIÓN</a>
+  </nav>
 </header>
-
+<section class="hero-banner">
+  <img src="./background.webp" width="500" alt="death-stranding-Background" class="hero-bg"/>
+<div class="hero-overlay"> </div>
 <main>
 
-    <section>
-<img src="./background.webp" width="500" />
+<div class="hero-content"> 
 
-<h1> BASE DE DATOS Y LORE DE VIDEOJUEGOS</h1>
+  <h1 class="hero-title"> BASE DE DATOS Y LORE DE VIDEOJUEGOS</h1>
+  <p class="hero-desc">Únete a la red para conocer el lore, tips, y recomendaciones de tus videojuegos favoritos o tu proxima saga favorita </p>
 
-<p>Únete a la red para conocer el lore, tips, y recomendaciones de tus videojuegos favoritos o tu proxima saga favorita 
-
-<form role="search">
-   <!--
-tags: [find, magnifier, magnifying glass]
-version: "1.0"
-unicode: "eb1c"
--->
-<svg
-  xmlns="http://www.w3.org/2000/svg"
-  width="20"
-  height="20"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="#ff6b22"
-  stroke-width="1.75"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
-  <path d="M21 21l-6 -6" />
-</svg>
-
-    <input type="text" placeholder="BUSCAR EN EL ODRADEK POR TÍTULO O PARTE DE LORE EJ. ELDEN RING">
-
-    <button type="submit"> ESCANEAR</button>
+<div class="search-console">
+<form role="search"> </form>
+<svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="11" cy="11" r="8"></circle>
+    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+  </svg>
+<input type="text" class="search-input" placeholder="BUSCAR EN EL ODRADEK POR TÍTULO O LORE">
+<button class="btn-scan"> ESCANEAR </button>
+</div>
+</div>
 </section>
 
 <section>
-    <header>
+   <div>
         <h1> [ PROTOCOLO 1. ¿POR QUÉ UTILIZAR NUESTRA RED? ]</h1>
-    </header>
+    
     <p>A diferencia de las wikis tradicionales saturadas de anuncios invasivos y párrafos de relleno, ODRADEK  ofrece una consola táctica de alto rendimiento en modo oscuro nativo que sintetiza el lore, las métricas clave, las guías y los secretos de tus videojuegos en una sola red rápida, directa y completamente libre de distracciones. </p>
-</form>
-
+</div>
  <section class="game-grid-container">
 <h2 class="Section-Title"> REGISTROS ACTIVOS // TITULOS DESTACADOS </h2> 
 
@@ -112,15 +94,19 @@ unicode: "eb1c"
 <span class="tag"> PLAYSTATION 5</span>
 <span class="tag"> Acción / Sci-Fi</span>
   </div>
+  
   <!-- TARJETA 1: CONTENIDO DE DEATH STRANDING -->
 <h3> DEATH STRANDING </h3>
 <p class="card-excerpt"> Reconecta una sociedad fragmentada mientras navegas por un terreno hostil plagado de Entidades Varadas </p>
 
 <div class="card-footer"> 
 <span class="card-metric"> Dificultad <strong> Alta // Táctica </strong></span>
-<a href="#" class="btn-Card"> ACCEDER AL CODEX</a>
+<a href="#" class="btn-card"> ACCEDER AL CODEX</a>
 </div>
+
+
 </div>
+
 </article>
 
 
@@ -143,7 +129,7 @@ unicode: "eb1c"
 
 <div class="card-footer"> 
 <span class="card-metric"> Dificultad <strong> EXTREMA </strong></span>
-<a href="#" class="btn-Card"> ACCEDER AL CODEX</a>
+<a href="#" class="btn-card"> ACCEDER AL CODEX</a>
 </div>
 </div>
 </article>

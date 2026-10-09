@@ -17,9 +17,7 @@ body {
     line-height: 1.6;
 }
 
-/* =========================================
-   2. HEADER HUD
-   ========================================= */
+/* 2. HEADER HUD*/
 header {
     background-color: #141414;
     border-bottom: 1px solid #333333;
@@ -129,9 +127,7 @@ header {
     box-shadow: 0 0 10px rgba(255, 107, 0, 0.5);
 }
 
-/* =========================================
-   3. HERO BANNER CINEMATOGRÁFICO Y ESCÁNER
-   ========================================= */
+/* 3. HERO BANNER CINEMATOGRÁFICO Y ESCÁNER*/
 .hero-banner {
     position: relative;
     min-height: 480px;
@@ -260,9 +256,7 @@ header {
     box-shadow: 0 0 15px rgba(255, 107, 0, 0.6);
 }
 
-/* =========================================
-   4. CONTENIDO Y GRID DE JUEGOS
-   ========================================= */
+/*4. CONTENIDO Y GRID DE JUEGOS */
 main {
     padding: 40px 20px;
     max-width: 1200px;
@@ -282,6 +276,32 @@ main {
 .protocol-section p {
     color: #cccccc;
 }
+
+.protocol-section{
+    margin-bottom: 50px;
+    background-color: rgba(20, 20, 20, 0.8);
+    border-left: 4px solid var(--neon-orange);
+    padding: 25px 30px;
+    border-radius: 0 8px 8px 0;
+    max-width: 900px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.protocol-section h1{
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: var(--neon-orange);
+    letter-spacing: 1px;
+}
+
+.protocol-section p{
+
+    color: #dddd;
+    font-size: 1.05rem;
+    line-height: 1.8;
+
+}
+
 
 .Section-Title {
     font-size: 1.2rem;
@@ -303,6 +323,59 @@ main {
     overflow: hidden;
     display: flex;
     flex-direction: column;
+}
+
+.game-card{
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-card:hover{
+
+    transform: translateY(-6px);
+    border-color: var(--neon-orange);
+    box-shadow: 0px 8px 20px rgba(255, 107, 0, 0.25);
+
+}
+
+.tag{
+
+transition: all 0.2 ease;
+cursor: default;
+}
+
+.tag:hover {
+
+border-color: var(--neon-orange);
+box-shadow: 0 0 8px rgba(255, 107, 0, 0.5);
+background-color: rgba(255, 107, 0, 0.1);
+
+}
+
+.tag-ps:hover {
+    border-color: #0070d1;
+    box-shadow: 0 0 10px rgba(0, 112, 209, 0.6);
+    background-color: rgba(0, 112, 209, 0.15);
+}
+
+/* Xbox - Verde Neón */
+.tag-xbox:hover {
+    border-color: #10e62c;
+    box-shadow: 0 0 10px rgba(16, 230, 44, 0.6);
+    background-color: rgba(16, 230, 44, 0.15);
+}
+
+/* Nintendo - Rojo Neón */
+.tag-nintendo:hover {
+    border-color: #ff0033;
+    box-shadow: 0 0 10px rgba(255, 0, 51, 0.6);
+    background-color: rgba(255, 0, 51, 0.15);
+}
+
+/* PC (Steam Blue) - Cámbialo a #ffcc00 si prefieres amarillo */
+.tag-pc:hover {
+    border-color: #66c0f4;
+    box-shadow: 0 0 10px rgba(102, 192, 244, 0.6);
+    background-color: rgba(102, 192, 244, 0.15);
 }
 
 .card-image {
@@ -402,9 +475,7 @@ footer {
     font-size: 0.8rem;
 }
 
-/* =========================================
-   5. ANIMACIONES
-   ========================================= */
+/* 5. ANIMACIONES */
 @keyframes odradek-pulse {
     0%, 100% {
         opacity: 1;
@@ -417,3 +488,62 @@ footer {
         transform: scale(0.8);
     }
 }
+
+/* 6. ADAPTIBILIDAD A DISPOSTIVOS MOVILES//TABLETAS */
+
+@media (max-width: 768px) {
+    header {
+
+
+        flex-direction: column;
+        padding: 15px;
+        gap: 15px;
+
+    }
+    .nav-menu {
+
+
+    margin-left: 0;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;}
+
+    .hero-title{
+
+        font-size: 1.5rem;
+
+    }
+    .hero-desc{
+
+        font-size: 0.9rem; }
+.hero-banner{
+    min-height: 380px;
+    padding: 40px 15px;
+}
+
+.search-console{
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+}
+
+.search-icon{
+
+    display: none;
+
+}
+
+.search-input{
+
+    width: 100%;
+    padding: 8px 0;
+    text-align: center;
+}
+
+.btn-scan{
+    margin-left: 0;
+    width: 100%;
+}
+}
+

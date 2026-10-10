@@ -10,7 +10,7 @@
 <meta name="description" content="Escanea e investiga el terreno de tu videojuego favorito, Para y hecho por Gamers" />
 </head>
 <body>
-
+<div class="screen-scanner"></div>
 <header>
   <div class="brand-container">
     <span class="hud-indicator"></span>
@@ -77,7 +77,15 @@
 <h2 class="Section-Title"> REGISTROS ACTIVOS / TITULOS DESTACADOS </h2> 
 
 
-<div class="game-grid">
+<div class="platform-filters">
+
+  <button class="tag filter-tag active" data-platform="all">TODOS </button>
+  <button class="tag tag-pc filter-tag" data-platform="pc">PC</button>
+  <button class="tag tag-ps filter-tag" data-platform="playstation">PLAYSTATION 5</button>
+  <button class="tag tag-xbox filter-tag" data-platform="xbox">XBOX SERIES</button>
+  <button class="tag tag-nintendo filter-tag" data-platform="nintendo"> NINTENDO SWITCH</button>
+</div>
+  <div class="game-grid">
   <!-- TARJETA 1: DEATH STRANDING -->
 <article class="game-card">
  <!-- TARJETA 1: IMAGEN DE DEATH STRANDING -->
@@ -170,7 +178,9 @@
 
 
 
+
 </main>
+
 
 <footer>
 
@@ -178,6 +188,78 @@
 
 </footer>
 
+<script>
+  // 1. Declaramos todas las variables correctamente (Nota el querySelectorAll para las tarjetas)
+  const searchInput = document.querySelector('.search-input');
+  const btnScan = document.querySelector('.btn-scan');
+  const gameCards = document.querySelectorAll('.game-card'); 
+  const screenScanner = document.querySelector('.screen-scanner'); // Agregamos el escáner
+
+  // 2. Función principal de filtrado (con G mayúscula)
+  function filterGames() {
+    const query = searchInput.value.toLowerCase().trim();
+    
+    // Iteramos sobre cada tarjeta individualmente
+    gameCards.forEach(card => {
+      // Usamos "card.querySelector" para buscar SOLO dentro de esa tarjeta específica
+      const title = card.querySelector('h3').textContent.toLowerCase();
+      const excerpt = card.querySelector('.card-excerpt').textContent.toLowerCase();
+
+      // Si hay coincidencia, mostramos; si no, ocultamos
+      if (title.includes(query) || excerpt.includes(query)) {
+        card.style.display = 'flex';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+
+  // 3. Función del destello azul (usando la variable correcta)
+  function triggerScannerEffect() {
+    screenScanner.classList.add('scanning');
+    
+    setTimeout(() => {
+        screenScanner.classList.remove('scanning');
+    }, 200);
+  }
+
+  // 4. Eventos de activación
+  // Al escribir en la barra:
+  searchInput.addEventListener('input', filterGames);
+
+  // Al presionar el botón ESCANEAR:
+  btnScan.addEventListener('click', (e) => {
+    e.preventDefault();
+    triggerScannerEffect(); // Dispara la luz
+    filterGames();          // Filtra los resultados
+  });
+
+const filterTags = document.querySelectorAll('.filter-tag');
+
+  filterTags.forEach(btn => {
+      btn.addEventListener('click', () => {
+          // 1. Le quitamos el brillo naranja a todos los botones y se lo ponemos solo al que clickeamos
+          filterTags.forEach(t => t.classList.remove('active'));
+          btn.classList.add('active');
+
+          // 2. Leemos la consola que eligió el usuario (pc, xbox, etc.)
+          const selectedPlatform = btn.getAttribute('data-platform');
+
+          // 3. Revisamos tarjeta por tarjeta
+          gameCards.forEach(card => {
+              // Leemos todos los tags que tiene la tarjeta adentro
+              const cardTagsText = card.querySelector('.card-tags').textContent.toLowerCase();
+              
+              // Si eligió "TODOS" o si la tarjeta incluye el nombre de la consola, la mostramos
+              if (selectedPlatform === 'all' || cardTagsText.includes(selectedPlatform)) {
+                  card.style.display = 'flex';
+              } else {
+                  card.style.display = 'none'; // Si no, la ocultamos
+              }
+          });
+      });
+      });
+</script>
 </body>
 
 </html>

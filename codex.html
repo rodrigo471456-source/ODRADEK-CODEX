@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ODRADEK - Terminal del Codex</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+<div class="brand-container">
+    <span class="hud-indicator"></span>
+    <div class="brand-text">
+        <h1 class="brand-title">ODRADEK</h1>
+        <h2 class="brand-subtitle">// TERMINAL DE DATOS CLASIFICADA</h2>
+        </div>
+    </div>
+<nav class="nav-menu">
+   <a href="index.html" class="btn-login"> VOLVER A LA PANTALLA PRINCIPAL </a>
+   </nav>
+  </header>
+
+
+<main class="codex-container">
+    <div class="codex-header">
+        <span id="game-badge" class="game-badge" style="margin: 0 0 10px 0;">CARGANDO...</span>
+        <h1 id="game-title" class="hero-title">ESCANEANDO REGISTRO...</h1>
+        <!-- 1. Corregido a "game-platforms" -->
+        <p id="game-platforms" style="color: var(--neon-orange); font-weight: bold; letter-spacing: 1px;"></p>
+    </div>
+
+    <div class="codex-banner">
+        <img id="game-img" src="" alt="Imagen del juego" style="width: 100%; max-height: 450px; object-fit: cover; border-radius: 8px; border: 1px solid #444;">
+    </div>
+
+    <!-- 2. Sección de LORE agregada con su id="game-lore" -->
+    <section class="protocol-section" style="max-width: 100%; margin-top: 30px;">
+        <h1>[ ARCHIVO DE LORE // SINOPSIS TÁCTICA ]</h1>
+        <p id="game-lore">Extrayendo información de la Red Quiral...</p>
+    </section>
+
+    <section class="protocol-section" style="max-width: 100%; border-left-color: #00c0ff;">
+        <h1 style="color: #00c0ff;">[ DIRECTIVAS DE SUPERVIVENCIA // TIPS ]</h1>
+        <p id="game-tips">Cargando parámetros de combate...</p>
+        <!-- 3. Corregido a "game-difficulty" con doble f -->
+        <p style="margin-top: 15px; font-size: 0.9rem; color: #888;">
+            Nivel de Amenaza / Dificultad: <strong id="game-difficulty" style="color: #fff;"></strong>
+        </p>
+    </section>
+<section class="telemetry-grid">
+            <div class="telemetry-card">
+                <span class="telemetry-label">// CAMPAÑA PRINCIPAL</span>
+                <strong id="game-campaign" class="telemetry-value">--</strong>
+            </div>
+            <div class="telemetry-card">
+                <span class="telemetry-label">// RUTA AL PLATINO (100%)</span>
+                <strong id="game-platinum" class="telemetry-value">--</strong>
+            </div>
+            <div class="telemetry-card">
+                <span class="telemetry-label">// EQUIPAMIENTO / META BUILD</span>
+                <strong id="game-build" class="telemetry-value">--</strong>
+            </div>
+            <div class="telemetry-card">
+                <span class="telemetry-label">// ARQUITECTURA / MOTOR</span>
+                <strong id="game-engine" class="telemetry-value">--</strong>
+            </div>
+        </section>
+    
+  </main>
+<footer>
+    <small> ODRADEK 2026 // CONEXION A BASE DE DATOS ACTIVA</small>
+    </footer>
+    <script src="database.js"></script>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search)
+        const gameKey = urlParams.get('id');
+
+        const selectedGame = codexDatabase[gameKey];
+
+        if (selectedGame) {
+            document.getElementById('game-title').textContent = selectedGame.title;
+            document.getElementById('game-badge').textContent = selectedGame.badge;
+            document.getElementById('game-img').src = selectedGame.image;
+            document.getElementById('game-platforms').textContent = selectedGame.platforms;
+            document.getElementById('game-lore').textContent = selectedGame.lore;
+            document.getElementById('game-tips').textContent = selectedGame.tips;
+            document.getElementById('game-difficulty').textContent = selectedGame.difficulty;
+            document.title = `ODRADEK - ${selectedGame.title}`;
+            document.getElementById('game-campaign').textContent = selectedGame.campaignTime;
+            document.getElementById('game-platinum').textContent = selectedGame.platinumTime;
+            document.getElementById('game-build').textContent = selectedGame.metaBuild;
+            document.getElementById('game-engine').textContent = selectedGame.engine;
+        } else {
+            document.getElementById('game-title').textContent = "ERROR 404 // REGISTRO NO ENCONTRADO";
+            document.getElementById('game-badge').textContent = "ACCESO DENEGADO";
+            document.getElementById('game-lore').textContent = "El identificador solicitado no existe en la base de datos del Odradek. Regresa al escáner principal y selecciona un título válido.";
+            document.getElementById('game-img').style.display = 'none';
+        }
+</script>
+</body>
+</html>

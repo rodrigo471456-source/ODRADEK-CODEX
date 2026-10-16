@@ -3,7 +3,7 @@
                 title: "DEATH STRANDING: DIRECTORS CUT",
                 badge:"EXPEDIENTE #001 // KOJIMA PRODUCTIONS",
                 image: "IMG/banner-deathstranding.png",
-                cardImage: "IMG/DEATHSTRANDING.JPG",
+                cardImage: "IMG/DEATHSTRANDING.jpg",
                 platforms: "PC | PLAYSTATION 5",
                 difficulty: "Alta // Táctica y logística de terreno",
                 lore: "Reconecta una humanidad fracturada tras el cataclismo que fusionó el mundo de los vivos con el de los muertos.<br><br>" +
@@ -28,7 +28,7 @@
                 title: "ELDEN RING: TARNISHED EDITION",
                 badge: "EXPEDIENTE #002 // FROMSOFTWARE",
                 image: "IMG/banner-eldenring.png",
-                cardImage: "IMG/ELDENRING.PNG",
+                cardImage: "IMG/ELDENRING.png",
                 platforms: "PC | PLAYSTATION 5 | XBOX SERIES | SWITCH 2",
                 difficulty: "EXTREMA // Castigo Alto",
                lore: "Explora las Tierras Intermedias, derrota a los semidioses corruptos y reclama el poder del Círculo de Elden.<br><br>" +
@@ -54,7 +54,7 @@
                 title: "CYBERPUNK 2077: PHANTOM LIBERTY",
                 badge: "EXPEDIENTE #003 // CD PROJEKT RED",
                 image: "IMG/banner-cyberpunk.png",
-                cardImage: "IMG/CYBERPUNK.PNG",
+                cardImage: "IMG/CYBERPUNK.png",
                 platforms: "PC | PLAYSTATION 5 | XBOX SERIES | SWITCH 2",
                 difficulty: "Baja-Alta // Escalable por Cyberware",
                 lore: "Sobrevive en la megalópolis de Night City mientras un biochip experimental reescribe tu mente desde adentro.<br><br>" +
@@ -79,7 +79,7 @@
     hollowknight: {
         title: "HOLLOW KNIGHT",
         badge: "EXPEDIENTE #004 // TEAM CHERRY",
-        cardImage: "IMG/HOLLOWKNIGHT.JPG",
+        cardImage: "IMG/HOLLOWKNIGHT.jpg",
         image: "IMG/banner-hollowknight.jpg",
         platforms: "PC | PLAYSTATION 5 | XBOX SERIES | NINTENDO SWITCH",
         difficulty: "Muy Alta // Precisión milimétrica y exploración",

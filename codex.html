@@ -7,25 +7,42 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-<div class="brand-container">
-    <span class="hud-indicator"></span>
-    <div class="brand-text">
-        <h1 class="brand-title">ODRADEK</h1>
-        <h2 class="brand-subtitle">// TERMINAL DE DATOS CLASIFICADA</h2>
+
+  <!-- BLOQUE 1: ENCABEZADO SUPERIOR -->
+<header>
+    <a href="index.html" class="brand-container">
+        <span class="hud-indicator"></span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="32" height="32" class="brand-logo" alt="Odradek">
+            <circle cx="50" cy="50" r="8" fill="#ffffff" />
+            <g fill="#ff6b00">
+                <polygon points="50,10 42,28 50,22 58,28" />
+                <polygon points="90,50 72,42 78,50 72,58" />
+                <polygon points="50,90 58,72 50,78 42,72" />
+                <polygon points="10,50 28,58 22,50 28,42" />
+            </g>
+            <g stroke="#888888" stroke-width="2.5" opacity="0.8">
+                <line x1="50" y1="22" x2="50" y2="42" />
+                <line x1="78" y1="50" x2="58" y2="50" />
+                <line x1="50" y1="78" x2="50" y2="58" />
+                <line x1="22" y1="50" x2="42" y2="50" />
+            </g>
+        </svg>
+        <div class="brand-text">
+            <h1 class="brand-title">ODRADEK</h1>
+            <h2 class="brand-subtitle">// TERMINAL DE DATOS CLASIFICADA</h2>
         </div>
-    </div>
-<nav class="nav-menu">
-   <a href="index.html" class="btn-login"> VOLVER A LA PANTALLA PRINCIPAL </a>
-   </nav>
+    </a>
+    <nav class="nav-menu">
+       <a href="index.html" class="btn-login"> VOLVER A LA PANTALLA PRINCIPAL </a>
+    </nav>
   </header>
 
+  <main class="codex-container">
 
-<main class="codex-container">
+    <!-- BLOQUE 2: IDENTIFICACIÓN DEL JUEGO Y BANNER -->
     <div class="codex-header">
         <span id="game-badge" class="game-badge" style="margin: 0 0 10px 0;">CARGANDO...</span>
         <h1 id="game-title" class="hero-title">ESCANEANDO REGISTRO...</h1>
-        <!-- 1. Corregido a "game-platforms" -->
         <p id="game-platforms" style="color: var(--neon-orange); font-weight: bold; letter-spacing: 1px;"></p>
     </div>
 
@@ -33,69 +50,106 @@
         <img id="game-img" src="" alt="Imagen del juego" style="width: 100%; max-height: 450px; object-fit: cover; border-radius: 8px; border: 1px solid #444;">
     </div>
 
-    <!-- 2. Sección de LORE agregada con su id="game-lore" -->
-    <section class="protocol-section" style="max-width: 100%; margin-top: 30px;">
-        <h1>[ ARCHIVO DE LORE // SINOPSIS TÁCTICA ]</h1>
-        <p id="game-lore">Extrayendo información de la Red Quiral...</p>
+    <!-- BLOQUE 3: PANEL DE TELEMETRÍA TÁCTICA -->
+    <section class="telemetry-grid">
+        <div class="telemetry-card">
+            <span class="telemetry-label">// CAMPAÑA PRINCIPAL</span>
+            <strong id="game-campaign" class="telemetry-value">--</strong>
+        </div>
+        <div class="telemetry-card">
+            <span class="telemetry-label">// RUTA AL PLATINO (100%)</span>
+            <strong id="game-platinum" class="telemetry-value">--</strong>
+        </div>
+        <div class="telemetry-card">
+            <span class="telemetry-label">// EQUIPAMIENTO / META BUILD</span>
+            <strong id="game-build" class="telemetry-value">--</strong>
+        </div>
+        <div class="telemetry-card">
+            <span class="telemetry-label">// ARQUITECTURA / MOTOR</span>
+            <strong id="game-engine" class="telemetry-value">--</strong>
+        </div>
     </section>
 
-    <section class="protocol-section" style="max-width: 100%; border-left-color: #00c0ff;">
+    <!-- BLOQUE 4: SISTEMA DE PESTAÑAS INTERACTIVAS (TABS) -->
+    <section class="protocol-section" style="max-width: 100%; margin-top: 30px; border: none; padding: 0; background: transparent; box-shadow: none;">
+        
+        <div class="tabs-header">
+            <button class="tab-btn active" onclick="openTab('lore', event)">[ LORE / SINOPSIS ]</button>
+            <button class="tab-btn" onclick="openTab('arsenal', event)">[ ARSENAL / BUILDS ]</button>
+            <button class="tab-btn" onclick="openTab('amenazas', event)">[ JEFES / AMENAZAS ]</button>
+        </div>
+
+        <div id="tab-lore" class="tab-content active" style="border-left-color: #00c0ff;">
+            <p id="game-lore">Extrayendo información de la Red...</p>
+        </div>
+
+        <div id="tab-arsenal" class="tab-content" style="border-left-color: var(--neon-orange);">
+            <p id="game-arsenal">Cargando armamento táctico...</p>
+        </div>
+
+        <div id="tab-amenazas" class="tab-content" style="border-left-color: #ff003c;">
+            <p id="game-amenazas">Analizando perfiles hostiles...</p>
+        </div>
+
+    </section>
+
+    <!-- BLOQUE 5: DIRECTIVAS DE SUPERVIVENCIA -->
+    <section class="protocol-section" style="max-width: 100%; border-left-color: #00c0ff; margin-top: 30px;">
         <h1 style="color: #00c0ff;">[ DIRECTIVAS DE SUPERVIVENCIA // TIPS ]</h1>
         <p id="game-tips">Cargando parámetros de combate...</p>
-        <!-- 3. Corregido a "game-difficulty" con doble f -->
         <p style="margin-top: 15px; font-size: 0.9rem; color: #888;">
             Nivel de Amenaza / Dificultad: <strong id="game-difficulty" style="color: #fff;"></strong>
         </p>
     </section>
-<section class="telemetry-grid">
-            <div class="telemetry-card">
-                <span class="telemetry-label">// CAMPAÑA PRINCIPAL</span>
-                <strong id="game-campaign" class="telemetry-value">--</strong>
-            </div>
-            <div class="telemetry-card">
-                <span class="telemetry-label">// RUTA AL PLATINO (100%)</span>
-                <strong id="game-platinum" class="telemetry-value">--</strong>
-            </div>
-            <div class="telemetry-card">
-                <span class="telemetry-label">// EQUIPAMIENTO / META BUILD</span>
-                <strong id="game-build" class="telemetry-value">--</strong>
-            </div>
-            <div class="telemetry-card">
-                <span class="telemetry-label">// ARQUITECTURA / MOTOR</span>
-                <strong id="game-engine" class="telemetry-value">--</strong>
-            </div>
-        </section>
     
   </main>
-<footer>
+
+  <footer>
     <small> ODRADEK 2026 // CONEXION A BASE DE DATOS ACTIVA</small>
-    </footer>
-    <script src="database.js"></script>
-    <script>
-        const urlParams = new URLSearchParams(window.location.search)
-        const gameKey = urlParams.get('id');
+  </footer>
 
-        const selectedGame = codexDatabase[gameKey];
+  <!-- BLOQUE 6: CEREBRO JAVASCRIPT DEL CODEX -->
+  <script src="database.js"></script>
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    // Si abres codex.html directo sin elegir juego, carga 'deathstranding' por defecto
+    const gameKey = urlParams.get('id') || 'deathstranding';
+    const selectedGame = codexDatabase[gameKey];
 
-        if (selectedGame) {
-            document.getElementById('game-title').textContent = selectedGame.title;
-            document.getElementById('game-badge').textContent = selectedGame.badge;
-            document.getElementById('game-img').src = selectedGame.image;
-            document.getElementById('game-platforms').textContent = selectedGame.platforms;
-            document.getElementById('game-lore').textContent = selectedGame.lore;
-            document.getElementById('game-tips').textContent = selectedGame.tips;
-            document.getElementById('game-difficulty').textContent = selectedGame.difficulty;
-            document.title = `ODRADEK - ${selectedGame.title}`;
-            document.getElementById('game-campaign').textContent = selectedGame.campaignTime;
-            document.getElementById('game-platinum').textContent = selectedGame.platinumTime;
-            document.getElementById('game-build').textContent = selectedGame.metaBuild;
-            document.getElementById('game-engine').textContent = selectedGame.engine;
-        } else {
-            document.getElementById('game-title').textContent = "ERROR 404 // REGISTRO NO ENCONTRADO";
-            document.getElementById('game-badge').textContent = "ACCESO DENEGADO";
-            document.getElementById('game-lore').textContent = "El identificador solicitado no existe en la base de datos del Odradek. Regresa al escáner principal y selecciona un título válido.";
-            document.getElementById('game-img').style.display = 'none';
-        }
-</script>
+    if (selectedGame) {
+        document.getElementById('game-title').textContent = selectedGame.title;
+        document.getElementById('game-badge').textContent = selectedGame.badge;
+        document.getElementById('game-img').src = selectedGame.image;
+        document.getElementById('game-platforms').textContent = selectedGame.platforms;
+        document.getElementById('game-difficulty').textContent = selectedGame.difficulty;
+        document.title = `ODRADEK - ${selectedGame.title}`;
+        
+        document.getElementById('game-campaign').textContent = selectedGame.campaignTime;
+        document.getElementById('game-platinum').textContent = selectedGame.platinumTime;
+        document.getElementById('game-build').textContent = selectedGame.metaBuild;
+        document.getElementById('game-engine').textContent = selectedGame.engine;
+
+        document.getElementById('game-lore').innerHTML = selectedGame.lore;
+        document.getElementById('game-tips').innerHTML = selectedGame.tips;
+        document.getElementById('game-arsenal').innerHTML = selectedGame.arsenal;
+        document.getElementById('game-amenazas').innerHTML = selectedGame.threats;
+    } else {
+        document.getElementById('game-title').textContent = "ERROR 404 // REGISTRO NO ENCONTRADO";
+        document.getElementById('game-badge').textContent = "ACCESO DENEGADO";
+        document.getElementById('game-lore').innerHTML = "El identificador solicitado no existe en la base de datos del Odradek.";
+        document.getElementById('game-img').style.display = 'none';
+    }
+
+    function openTab(tabId, event) {
+        const contents = document.querySelectorAll('.tab-content');
+        contents.forEach(c => c.classList.remove('active'));
+
+        const buttons = document.querySelectorAll('.tab-btn');
+        buttons.forEach(b => b.classList.remove('active'));
+
+        document.getElementById('tab-' + tabId).classList.add('active');
+        event.currentTarget.classList.add('active');
+    }
+  </script>
 </body>
 </html>

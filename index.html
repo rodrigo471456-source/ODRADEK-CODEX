@@ -1,267 +1,209 @@
 <!DOCTYPE html>
-
 <html lang="es">
-
 <head>
-
-<title> ODRADEK - Inicio </title>
-<link rel="stylesheet" href="css/style.css">
-<meta charset="UTF-8" />
-<meta name="description" content="Escanea e investiga el terreno de tu videojuego favorito, Para y hecho por Gamers" />
+    <title> ODRADEK - Inicio </title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8" />
+    <meta name="description" content="Escanea e investiga el terreno de tu videojuego favorito, Para y hecho por Gamers" />
 </head>
 <body>
-<div class="screen-scanner"></div>
+    <div class="screen-scanner"></div>
+
 <header>
-  <div class="brand-container">
-    <span class="hud-indicator"></span>
+        <a href="index.html" class="brand-container">
+            <span class="hud-indicator"></span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="32" height="32" class="brand-logo" alt="Odradek">
+                <circle cx="50" cy="50" r="8" fill="#ffffff" />
+                <g fill="#ff6b00">
+                    <polygon points="50,10 42,28 50,22 58,28" />
+                    <polygon points="90,50 72,42 78,50 72,58" />
+                    <polygon points="50,90 58,72 50,78 42,72" />
+                    <polygon points="10,50 28,58 22,50 28,42" />
+                </g>
+                <g stroke="#888888" stroke-width="2.5" opacity="0.8">
+                    <line x1="50" y1="22" x2="50" y2="42" />
+                    <line x1="78" y1="50" x2="58" y2="50" />
+                    <line x1="50" y1="78" x2="50" y2="58" />
+                    <line x1="22" y1="50" x2="42" y2="50" />
+                </g>
+            </svg>
+            <div class="brand-text">
+                <h1 class="brand-title">ODRADEK</h1>
+                <h2 class="brand-subtitle">// EL CODEX TÁCTICO DE VIDEOJUEGOS</h2>
+            </div>
+        </a>
+        <nav class="nav-menu">
+            <a href="index.html" class="nav-link active">INICIO</a>
+            <a href="#" class="nav-link">VIDEO JUEGOS</a>
+            <a href="#" class="nav-link">SUGERENCIAS</a>
+            <a href="#" class="btn-login">INICIAR SESIÓN</a>
+        </nav>
+    </header>
 
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="32" height="32" class="brand-logo" alt="Odradek">
-      <circle cx="50" cy="50" r="8" fill="#ffffff" />
-      <g fill="#ff6b00">
-        <polygon points="50,10 42,28 50,22 58,28" />
-        <polygon points="90,50 72,42 78,50 72,58" />
-        <polygon points="50,90 58,72 50,78 42,72" />
-        <polygon points="10,50 28,58 22,50 28,42" />
-      </g>
-      <g stroke="#888888" stroke-width="2.5" opacity="0.8">
-        <line x1="50" y1="22" x2="50" y2="42" />
-        <line x1="78" y1="50" x2="58" y2="50" />
-        <line x1="50" y1="78" x2="50" y2="58" />
-        <line x1="22" y1="50" x2="42" y2="50" />
-      </g>
-    </svg>
+    <section class="hero-banner">
+        <img src="IMG/background.webp" width="500" alt="death-stranding-Background" class="hero-bg"/>
+        <div class="hero-overlay"> </div>
+        <main>
+            <div class="hero-content"> 
+                <h1 class="hero-title"> BASE DE DATOS Y LORE DE VIDEOJUEGOS</h1>
+                <p class="hero-desc">Únete a la red para conocer el lore, tips, y recomendaciones de tus videojuegos favoritos o tu proxima saga favorita </p>
 
-    <div class="brand-text">
-      <h1 class="brand-title">ODRADEK</h1>
-      <h2 class="brand-subtitle">// EL CODEX TÁCTICO DE VIDEOJUEGOS</h2>
-    </div>
-  </div>
+                <div class="search-console">
+                    <form role="search" onsubmit="event.preventDefault();"> </form>
+                    <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <input type="text" class="search-input" placeholder="BUSCAR EN EL ODRADEK POR TÍTULO O LORE">
+                    <button class="btn-scan"> ESCANEAR </button>
+                </div>
+            </div>
+        </main>
+    </section>
 
-  <nav class="nav-menu">
-    <a href="#" class="nav-link active">INICIO</a>
-    <a href="#" class="nav-link">VIDEO JUEGOS</a>
-    <a href="#" class="nav-link">SUGERENCIAS</a>
-    <a href="#" class="btn-login">INICIAR SESIÓN</a>
-  </nav>
-</header>
-<section class="hero-banner">
-  <img src="IMG/background.webp" width="500" alt="death-stranding-Background" class="hero-bg"/>
-<div class="hero-overlay"> </div>
-<main>
+    <main>
+        <section class="protocol-section">
+            <div>
+                <h1> [ PROTOCOLO 1. ¿POR QUÉ UTILIZAR NUESTRA RED? ]</h1>
+                <p>A diferencia de las wikis tradicionales saturadas de anuncios invasivos y párrafos de relleno, ODRADEK ofrece una consola táctica de alto rendimiento en modo oscuro nativo que sintetiza el lore, las métricas clave, las guías y los secretos de tus videojuegos en una sola red rápida, directa y completamente libre de distracciones.</p>
+            </div>
+        </section>
+        
+        <section class="game-grid-container">
+            <h2 class="Section-Title"> REGISTROS ACTIVOS / TITULOS DESTACADOS </h2> 
 
-<div class="hero-content"> 
+            <div class="platform-filters">
+                <button class="tag filter-tag active" data-platform="all">TODOS </button>
+                <button class="tag tag-pc filter-tag" data-platform="pc">PC</button>
+                <button class="tag tag-ps filter-tag" data-platform="playstation">PLAYSTATION 5</button>
+                <button class="tag tag-xbox filter-tag" data-platform="xbox">XBOX SERIES</button>
+                <button class="tag tag-nintendo filter-tag" data-platform="nintendo"> NINTENDO SWITCH</button>
+            </div>
 
-  <h1 class="hero-title"> BASE DE DATOS Y LORE DE VIDEOJUEGOS</h1>
-  <p class="hero-desc">Únete a la red para conocer el lore, tips, y recomendaciones de tus videojuegos favoritos o tu proxima saga favorita </p>
+            <!-- CONTENEDOR VACÍO: JAVASCRIPT INYECTARÁ LAS TARJETAS AQUÍ -->
+            <div class="game-grid">
+            </div>
+        </section>
+    </main>
 
-<div class="search-console">
-<form role="search"> </form>
-<svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <circle cx="11" cy="11" r="8"></circle>
-    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-  </svg>
-<input type="text" class="search-input" placeholder="BUSCAR EN EL ODRADEK POR TÍTULO O LORE">
-<button class="btn-scan"> ESCANEAR </button>
-</div>
-</div>
-</section>
+    <footer>
+        <small> ODRADEK 2026 TODOS LOS DERECHOS RESERVADOS </small>
+    </footer>
 
-<section class="protocol-section">
-   <div>
-        <h1> [ PROTOCOLO 1. ¿POR QUÉ UTILIZAR NUESTRA RED? ]</h1>
-    
-    <p>A diferencia de las wikis tradicionales saturadas de anuncios invasivos y párrafos de relleno, ODRADEK  ofrece una consola táctica de alto rendimiento en modo oscuro nativo que sintetiza el lore, las métricas clave, las guías y los secretos de tus videojuegos en una sola red rápida, directa y completamente libre de distracciones. </p>
-</div>
-</section>
- <section class="game-grid-container">
-<h2 class="Section-Title"> REGISTROS ACTIVOS / TITULOS DESTACADOS </h2> 
+    <!-- CEREBRO JAVASCRIPT -->
+    <script src="database.js"></script>
+    <script>
+        const gridContainer = document.querySelector('.game-grid');
+        const searchInput = document.querySelector('.search-input');
+        const btnScan = document.querySelector('.btn-scan');
+        const screenScanner = document.querySelector('.screen-scanner');
 
+// --- 1. MOTOR DE INYECCIÓN DE TARJETAS ---
+        let cardsHTML = '';
 
-<div class="platform-filters">
+        for (const key in codexDatabase) {
+            const game = codexDatabase[key]; 
+            
+            // Separamos las consolas por la barra "|" y le asignamos su clase de color a cada una
+            const tagsHTML = game.platforms.split('|').map(plat => {
+                const p = plat.trim();
+                const pLower = p.toLowerCase();
+                let tagClass = 'tag';
+                let label = p;
 
-  <button class="tag filter-tag active" data-platform="all">TODOS </button>
-  <button class="tag tag-pc filter-tag" data-platform="pc">PC</button>
-  <button class="tag tag-ps filter-tag" data-platform="playstation">PLAYSTATION 5</button>
-  <button class="tag tag-xbox filter-tag" data-platform="xbox">XBOX SERIES</button>
-  <button class="tag tag-nintendo filter-tag" data-platform="nintendo"> NINTENDO SWITCH</button>
-</div>
-  <div class="game-grid">
-  <!-- TARJETA 1: DEATH STRANDING -->
-<article class="game-card">
- <!-- TARJETA 1: IMAGEN DE DEATH STRANDING -->
-  <div class="card-image">
-    <img src="IMG/death-stranding-directors-cut_fbaa.jpg" alt="" width="300">
-    <span class="game-badge"> DIRECTOR'S CUT </span>
-  </div>
-<!-- TARJETA 1: TAGS DE DEATH STRANDING -->
-<div class="card-content">
-  <div class="card-tags">
-<span class="tag tag-pc"> PC </span>
-<span class="tag tag-ps"> PLAYSTATION 5</span>
-<span class="tag"> Acción / Sci-Fi</span>
-  </div>
-  
-  <!-- TARJETA 1: CONTENIDO DE DEATH STRANDING -->
-<h3> DEATH STRANDING </h3>
-<p class="card-excerpt"> Reconecta una sociedad fragmentada mientras navegas por un terreno hostil plagado de Entidades Varadas </p>
+                if (pLower.includes('pc')) {
+                    tagClass += ' tag-pc';
+                } else if (pLower.includes('playstation') || pLower.includes('ps')) {
+                    tagClass += ' tag-ps';
+                } else if (pLower.includes('xbox')) {
+                    tagClass += ' tag-xbox';
+                } else if (pLower.includes('switch') || pLower.includes('nintendo')) {
+                    tagClass += ' tag-nintendo';
+                    // Aseguramos que diga NINTENDO para que el botón de filtro superior lo detecte
+                    if (!pLower.includes('nintendo')) label = 'NINTENDO ' + p;
+                }
 
-<div class="card-footer"> 
-<span class="card-metric"> Dificultad <strong> Alta // Táctica </strong></span>
-<a href="codex.html?id=deathstranding" class="btn-card"> ACCEDER AL CODEX</a>
-</div>
+                return `<span class="${tagClass}">${label}</span>`;
+            }).join('');
 
+            // Armamos la tarjeta respetando tu diseño original y tu imagen de carta (cardImage)
+            cardsHTML += `
+            <article class="game-card" style="display: flex;">
+              <div class="card-image">
+                <img src="${game.cardImage}" alt="${game.title}" width="300">
+                <span class="game-badge">${game.badge.split('//')[0].trim()}</span>
+              </div>
+              <div class="card-content">
+                <div class="card-tags">
+                  ${tagsHTML}
+                </div>
+                <h3>${game.title}</h3>
+                <p class="card-excerpt">${game.lore.replace(/<[^>]*>?/gm, '').substring(0, 110)}...</p>
+                <div class="card-footer"> 
+                  <span class="card-metric">Dificultad <strong>${game.difficulty.split('//')[0]}</strong></span>
+                  <a href="codex.html?id=${key}" class="btn-card">ACCEDER AL CODEX</a>
+                </div>
+              </div>
+            </article>
+            `;
+        }
+        
+        // Disparamos las tarjetas al HTML
+        gridContainer.innerHTML = cardsHTML;
 
-</div>
+        // --- 2. LÓGICA DE BUSCADOR Y FILTROS ---
+        const gameCards = document.querySelectorAll('.game-card'); 
 
-</article>
+        function filterGames() {
+            const query = searchInput.value.toLowerCase().trim();
+            gameCards.forEach(card => {
+                const title = card.querySelector('h3').textContent.toLowerCase();
+                const excerpt = card.querySelector('.card-excerpt').textContent.toLowerCase();
 
+                if (title.includes(query) || excerpt.includes(query)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
 
-  <!-- TARJETA 2: ELDEN RING -->
-<article class="game-card">
- <!-- TARJETA 1: IMAGEN DE ELDEN RING -->
-  <div class="card-image">
-    <img src="IMG/ELDENRING.png" alt="" width="300">
-    <span class="game-badge"> TARNISHED EDITION </span>
-  </div>
-<!-- TARJETA 2: TAGS DE ELDEN RING -->
-<div class="card-content">
-  <div class="card-tags">
-<span class="tag tag-pc"> PC </span>
-<span class="tag tag-ps"> PLAYSTATION5</span>
-<span class="tag tag-xbox"> XBOX SERIES</span>
-<span class="tag tag-nintendo"> NINTENDO SWITCH 2</span>
-<span class="tag"> ARPG </span>
-  </div>
-  <!-- TARJETA 2: CONTENIDO DE ELDEN RING -->
-<h3> ELDEN RING </h3>
-<p class="card-excerpt"> Explora las Tierras Intermedias, domina el combate táctico y reclama el poder del Círculo de Elden. </p>
+        function triggerScannerEffect() {
+            screenScanner.classList.add('scanning');
+            setTimeout(() => {
+                screenScanner.classList.remove('scanning');
+            }, 200);
+        }
 
-<div class="card-footer"> 
-<span class="card-metric"> Dificultad <strong> EXTREMA </strong></span>
-<a href="codex.html?id=eldenring" class="btn-card"> ACCEDER AL CODEX</a>
-</div>
-</div>
-</article>
+        searchInput.addEventListener('input', filterGames);
+        btnScan.addEventListener('click', (e) => {
+            e.preventDefault();
+            triggerScannerEffect();
+            filterGames();
+        });
 
+        // --- 3. LÓGICA DE BOTONES DE PLATAFORMA ---
+        const filterTags = document.querySelectorAll('.filter-tag');
 
+        filterTags.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterTags.forEach(t => t.classList.remove('active'));
+                btn.classList.add('active');
 
-  <!-- TARJETA 3: CYBERPUNK: 2077 -->
-<article class="game-card">
- <!-- TARJETA 1: IMAGEN DE CYBERPUNK: 2077 -->
-  <div class="card-image">
-    <img src="IMG/CYBERPUNK.png" alt="" width="300">
-    <span class="game-badge"> PANTHOM LIBERTY </span>
-  </div>
-<!-- TARJETA 3: TAGS DE CYBERPUNK: 2077 -->
-<div class="card-content">
-  <div class="card-tags">
-<span class="tag tag-pc"> PC </span>
-<span class="tag tag-ps"> PLAYSTATION5</span>
-<span class="tag tag-xbox"> XBOX SERIES</span>
-<span class="tag tag-nintendo"> NINTENDO SWITCH 2</span>
-<span class="tag"> RPG</span>
-  </div>
-  <!-- TARJETA 3: CONTENIDO DE CYBERPUNK: 2077 -->
-<h3> CYBERPUNK: 2077 </h3>
-<p class="card-excerpt"> Conviértete en un mercenario urbano en Night City y ábrete paso entre corporaciones y cyberware. </p>
+                const selectedPlatform = btn.getAttribute('data-platform');
 
-<div class="card-footer"> 
-<span class="card-metric"> Dificultad <strong> Baja-Alta // AJUSTABLE </strong></span>
-<a href="codex.html?id=cyberpunk" class="btn-card"> ACCEDER AL CODEX</a>
-</div>
-</div>
-</article>
-
-
-</div>
- </section>
-
-
-
-
-</main>
-
-
-<footer>
-
-<small> ODRADEK 2026 TODOS LOS DERECHOS RESEREVADOS </small>
-
-</footer>
-
-<script>
-  // 1. Declaramos todas las variables correctamente (Nota el querySelectorAll para las tarjetas)
-  const searchInput = document.querySelector('.search-input');
-  const btnScan = document.querySelector('.btn-scan');
-  const gameCards = document.querySelectorAll('.game-card'); 
-  const screenScanner = document.querySelector('.screen-scanner'); // Agregamos el escáner
-
-  // 2. Función principal de filtrado (con G mayúscula)
-  function filterGames() {
-    const query = searchInput.value.toLowerCase().trim();
-    
-    // Iteramos sobre cada tarjeta individualmente
-    gameCards.forEach(card => {
-      // Usamos "card.querySelector" para buscar SOLO dentro de esa tarjeta específica
-      const title = card.querySelector('h3').textContent.toLowerCase();
-      const excerpt = card.querySelector('.card-excerpt').textContent.toLowerCase();
-
-      // Si hay coincidencia, mostramos; si no, ocultamos
-      if (title.includes(query) || excerpt.includes(query)) {
-        card.style.display = 'flex';
-      } else {
-        card.style.display = 'none';
-      }
-    });
-  }
-
-  // 3. Función del destello azul (usando la variable correcta)
-  function triggerScannerEffect() {
-    screenScanner.classList.add('scanning');
-    
-    setTimeout(() => {
-        screenScanner.classList.remove('scanning');
-    }, 200);
-  }
-
-  // 4. Eventos de activación
-  // Al escribir en la barra:
-  searchInput.addEventListener('input', filterGames);
-
-  // Al presionar el botón ESCANEAR:
-  btnScan.addEventListener('click', (e) => {
-    e.preventDefault();
-    triggerScannerEffect(); // Dispara la luz
-    filterGames();          // Filtra los resultados
-  });
-
-const filterTags = document.querySelectorAll('.filter-tag');
-
-  filterTags.forEach(btn => {
-      btn.addEventListener('click', () => {
-          // 1. Le quitamos el brillo naranja a todos los botones y se lo ponemos solo al que clickeamos
-          filterTags.forEach(t => t.classList.remove('active'));
-          btn.classList.add('active');
-
-          // 2. Leemos la consola que eligió el usuario (pc, xbox, etc.)
-          const selectedPlatform = btn.getAttribute('data-platform');
-
-          // 3. Revisamos tarjeta por tarjeta
-          gameCards.forEach(card => {
-              // Leemos todos los tags que tiene la tarjeta adentro
-              const cardTagsText = card.querySelector('.card-tags').textContent.toLowerCase();
-              
-              // Si eligió "TODOS" o si la tarjeta incluye el nombre de la consola, la mostramos
-              if (selectedPlatform === 'all' || cardTagsText.includes(selectedPlatform)) {
-                  card.style.display = 'flex';
-              } else {
-                  card.style.display = 'none'; // Si no, la ocultamos
-              }
-          });
-      });
-      });
-</script>
+                gameCards.forEach(card => {
+                    const cardTagsText = card.querySelector('.card-tags').textContent.toLowerCase();
+                    if (selectedPlatform === 'all' || cardTagsText.includes(selectedPlatform)) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
 </body>
-
 </html>
 
 <!-- NOTA INTERNA: AQUI TERMINA EL DIA UNO, CON EL TUTORIAL AL MINUTO 47:11 PENDIENTE DE CONTINUACION

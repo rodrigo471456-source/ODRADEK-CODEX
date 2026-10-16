@@ -35,6 +35,8 @@ header {
     display: flex;
     align-items: center;
     gap: 12px;
+    text-decoration: none; /* Quita el subrayado de enlace */
+    cursor: pointer;       /* Pone la manita al pasar el mouse */
 }
 
 .hud-indicator {
@@ -626,4 +628,70 @@ footer {
     font-size: 0.95rem;
     color: #ffffff;
     letter-spacing: 0.5px;
+}
+
+.protocol-section p strong {
+    color: #ffffff;
+    font-weight: 800;
+}
+
+.protocol-section p mark {
+    background-color: rgba(255, 107, 0, 0.12);
+    color: var(--neon-orange);
+    font-weight: 800;
+    padding: 1px 5px;
+    border-radius: 3px;
+}
+
+.tabs-header {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    background: #111;
+    color: #666;
+    border: 1px solid #333;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.tab-btn:hover {
+    background: #222;
+    color: #fff;
+    border-color: #666;
+}
+
+/* CORREGIDO: Con punto (.) en vez de dos puntos (:) */
+.tab-btn.active {
+    color: var(--neon-orange);
+    border-bottom: 2px solid var(--neon-orange);
+    background: #1a1a1a;
+}
+
+.tab-content {
+    display: none;
+    background: #181818;
+    padding: 20px;
+    border: 1px solid #333;
+    border-left: 3px solid;
+    border-radius: 4px;
+}
+
+/* CORREGIDO: Con punto (.) en vez de dos puntos (:) */
+.tab-content.active {
+    display: block;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
 }

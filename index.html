@@ -7,6 +7,19 @@
     <meta name="description" content="Escanea e investiga el terreno de tu videojuego favorito, Para y hecho por Gamers" />
 </head>
 <body>
+
+<div id="mapache-protocol" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(10, 10, 10, 0.95); z-index: 9999; flex-direction: column; justify-content: center; align-items: center; text-align: center; border: 2px solid #ff6b00; backdrop-filter: blur(5px);">
+        <h1 style="color: #ff6b00; font-family: monospace; font-size: 3rem; text-shadow: 0 0 15px #ff6b00; letter-spacing: 5px;">// ACCESO RESTRINGIDO //</h1>
+        <p style="color: #fff; font-family: monospace; font-size: 1.2rem; max-width: 600px; margin: 20px 0;">Has accedido a los registros cifrados de Lyrod Studios. Las transmisiones están siendo monitoreadas.</p>
+        
+        <!-- Aquí pondrás la imagen real de tu mapache en el futuro -->
+        <div style="width: 200px; height: 200px; border: 2px dashed #888; border-radius: 50%; display: flex; justify-content: center; align-items: center; margin-bottom: 30px; background: #111;">
+            <img src="IMG/MAPACHE_RODU.jpg" alt="Mapache Lyrod Studios" style="width: 220px; height: 220px; border-radius: 50%; border: 2px solid #ff6b00; margin-bottom: 30px; object-fit: cover; box-shadow: 0 0 25px rgba(255, 107, 0, 0.4);">
+        </div>
+        
+        <button id="btn-cerrar-mapache" class="btn-card" style="padding: 15px 30px; font-size: 1.2rem; cursor: pointer;">CERRAR CONEXIÓN</button>
+    </div>
+
     <div class="screen-scanner"></div>
 
 <header>
@@ -70,6 +83,7 @@
         </section>
         
         <section class="game-grid-container">
+        
             <h2 class="Section-Title"> REGISTROS ACTIVOS / TITULOS DESTACADOS </h2> 
 
             <div class="platform-filters">
@@ -83,7 +97,12 @@
             <!-- CONTENEDOR VACÍO: JAVASCRIPT INYECTARÁ LAS TARJETAS AQUÍ -->
             <div class="game-grid">
             </div>
-        </section>
+
+            <div id="no-results" style="display: none; text-align: center; padding: 40px 20px; border: 1px dashed #ff3333; background: rgba(255, 51, 51, 0.05); margin-top: 20px; border-radius: 4px;"></div>
+            <h3 style="color: #ff3333; font-family: monospace; font-size: 1.5rem; letter-spacing: 2px; margin-bottom: 10px;">[ // ERROR 404: EXPEDIENTE NO LOCALIZADO x.x // ]</h3>
+                <p style="color: #888; font-family: monospace;">La red ODRADEK no encontró coincidencias en los registros activos. Intenta otra vez.</p>
+        </div>
+            </section>
     </main>
 
     <footer>
@@ -93,12 +112,12 @@
     <!-- CEREBRO JAVASCRIPT -->
     <script src="database.js"></script>
     <script>
-        const gridContainer = document.querySelector('.game-grid');
+const gridContainer = document.querySelector('.game-grid');
         const searchInput = document.querySelector('.search-input');
         const btnScan = document.querySelector('.btn-scan');
         const screenScanner = document.querySelector('.screen-scanner');
 
-// --- 1. MOTOR DE INYECCIÓN DE TARJETAS ---
+        // --- 1. MOTOR DE INYECCIÓN DE TARJETAS ---
         let cardsHTML = '';
 
         for (const key in codexDatabase) {
@@ -119,16 +138,16 @@
                     tagClass += ' tag-xbox';
                 } else if (pLower.includes('switch') || pLower.includes('nintendo')) {
                     tagClass += ' tag-nintendo';
-                    // Aseguramos que diga NINTENDO para que el botón de filtro superior lo detecte
                     if (!pLower.includes('nintendo')) label = 'NINTENDO ' + p;
                 }
 
                 return `<span class="${tagClass}">${label}</span>`;
             }).join('');
 
-            // Armamos la tarjeta respetando tu diseño original y tu imagen de carta (cardImage)
+            // NOTA: Aquí inyectamos el data-keywords="${game.keywords}". 
+            // Es un bolsillo secreto invisible donde guardamos las palabras clave de database.js
             cardsHTML += `
-            <article class="game-card" style="display: flex;">
+            <article class="game-card" style="display: flex;" data-keywords="${game.keywords || ''}">
               <div class="card-image">
                 <img src="${game.cardImage}" alt="${game.title}" width="300">
                 <span class="game-badge">${game.badge.split('//')[0].trim()}</span>
@@ -151,22 +170,58 @@
         // Disparamos las tarjetas al HTML
         gridContainer.innerHTML = cardsHTML;
 
-        // --- 2. LÓGICA DE BUSCADOR Y FILTROS ---
+        // --- 2. LÓGICA DE ESCÁNER PROFUNDO (DEEP SCAN) ---
         const gameCards = document.querySelectorAll('.game-card'); 
+
+      // --- 2. LÓGICA DE ESCÁNER PROFUNDO (ACTUALIZADO CON PROTOCOLO MAPACHE) ---
+ const noResultsMsg = document.getElementById('no-results');
 
         function filterGames() {
             const query = searchInput.value.toLowerCase().trim();
+            
+            // EASTER EGG: El Detonador Secreto
+            if (query === "mapache" || query === "lyrod" || query === "rodu") {
+                document.getElementById('mapache-protocol').style.display = 'flex';
+                playTechSound(150, 'sawtooth', 0.8, 0.1);
+                searchInput.value = '';
+                return;
+            }
+
+            let cartasVisibles = 0;
+
             gameCards.forEach(card => {
                 const title = card.querySelector('h3').textContent.toLowerCase();
                 const excerpt = card.querySelector('.card-excerpt').textContent.toLowerCase();
+                const platforms = card.querySelector('.card-tags').textContent.toLowerCase();
+                const keywords = card.getAttribute('data-keywords').toLowerCase();
 
-                if (title.includes(query) || excerpt.includes(query)) {
+                if (title.includes(query) || platforms.includes(query) || keywords.includes(query)) {
                     card.style.display = 'flex';
+                    // NOTA: Si la tarjeta sobrevive al filtro, sumamos 1 al contador
+                    cartasVisibles++;
                 } else {
                     card.style.display = 'none';
                 }
             });
+
+            // NOTA: Evaluamos el contador después de revisar todas las cartas.
+            // Si quedó en 0, encendemos la alerta; en el "else", la ocultamos.
+            if (cartasVisibles === 0) {
+                // NOTA: Si la alerta estaba oculta y apenas va a aparecer, disparamos un tono grave de error
+                if (noResultsMsg.style.display === 'none') {
+                    playTechSound(220, 'sawtooth', 0.2, 0.04);
+                }
+                noResultsMsg.style.display = 'block';
+            } else {
+                noResultsMsg.style.display = 'none';
+            }
         }
+
+        // Lógica para cerrar la pantalla secreta
+        document.getElementById('btn-cerrar-mapache').addEventListener('click', () => {
+            document.getElementById('mapache-protocol').style.display = 'none';
+            playTechSound(800, 'sine', 0.1, 0.05); // Sonido de confirmación al salir
+        });
 
         function triggerScannerEffect() {
             screenScanner.classList.add('scanning');
@@ -176,6 +231,7 @@
         }
 
         searchInput.addEventListener('input', filterGames);
+        
         btnScan.addEventListener('click', (e) => {
             e.preventDefault();
             triggerScannerEffect();
@@ -202,6 +258,41 @@
                 });
             });
         });
+
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        const audioCtx = new AudioContext();
+
+        function playTechSound(freq, type, duration, vol){
+
+            if (audioCtx.state === 'suspended') audioCtx.resume();
+
+            const oscillator = audioCtx.createOscillator();
+            const gainNode = audioCtx.createGain();
+
+            oscillator.type = type;
+            oscillator.frequency.setValueAtTime(freq, audioCtx.currentTime);
+
+            gainNode.gain.setValueAtTime(vol, audioCtx.currentTime);
+            gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + duration);
+              
+            oscillator.connect(gainNode);
+            gainNode.connect(audioCtx.destination);
+
+            oscillator.start();
+            oscillator.stop(audioCtx.currentTime + duration);
+
+            }
+
+            filterTags.forEach(btn => {
+                btn.addEventListener('mouseenter', () => {
+                    playTechSound(1200, 'sine', 0.1, 0.05);
+ });
+            });
+
+            btnScan.addEventListener('click', () => {
+                playTechSound(400, 'square', 0.1, 0.05)
+                setTimeout(() => playTechSound(800, 'square', 0.15, 0.05), 100)
+            });
     </script>
 </body>
 </html>

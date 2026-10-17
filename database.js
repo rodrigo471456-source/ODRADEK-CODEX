@@ -2,9 +2,10 @@
             deathstranding: {
                 title: "DEATH STRANDING: DIRECTORS CUT",
                 badge:"EXPEDIENTE #001 // KOJIMA PRODUCTIONS",
-                image: "IMG/banner-deathstranding.png",
-                cardImage: "IMG/DEATHSTRANDING.jpg",
+                image: "IMG/banner-deathstranding.webp",
+                cardImage: "IMG/card-deathstranding.webp",
                 platforms: "PC | PLAYSTATION 5",
+                keywords: "kojima, norman reedus, bebes, postapocaliptico, sigilo, envios, terrorista, ciencia ficcion",
                 difficulty: "Alta // Táctica y logística de terreno",
                 lore: "Reconecta una humanidad fracturada tras el cataclismo que fusionó el mundo de los vivos con el de los muertos.<br><br>" +
               "<strong>[ ARCHIVO 01: LA FÍSICA DE LA EXTINCIÓN Y LA PLAYA ]</strong><br>" +
@@ -27,9 +28,10 @@
         eldenring: {
                 title: "ELDEN RING: TARNISHED EDITION",
                 badge: "EXPEDIENTE #002 // FROMSOFTWARE",
-                image: "IMG/banner-eldenring.png",
-                cardImage: "IMG/ELDENRING.png",
-                platforms: "PC | PLAYSTATION 5 | XBOX SERIES | SWITCH 2",
+                image: "IMG/banner-eldenring.webp",
+                cardImage: "IMG/card-eldenring.webp",
+                platforms: "PC | PLAYSTATIONd 5 | XBOX SERIES | SWITCH 2",
+                keywords: "miyazaki, goty, souls, mundo abierto, fantasia oscura, ranni, magia, medieval",
                 difficulty: "EXTREMA // Castigo Alto",
                lore: "Explora las Tierras Intermedias, derrota a los semidioses corruptos y reclama el poder del Círculo de Elden.<br><br>" +
               "<strong>[ ARCHIVO 01: LA ORDEN DORADA Y LA REINA MÁRIKA ]</strong><br>" +
@@ -53,9 +55,10 @@
             cyberpunk: {
                 title: "CYBERPUNK 2077: PHANTOM LIBERTY",
                 badge: "EXPEDIENTE #003 // CD PROJEKT RED",
-                image: "IMG/banner-cyberpunk.png",
-                cardImage: "IMG/CYBERPUNK.png",
+                image: "IMG/banner-cyberpunk.webp",
+                cardImage: "IMG/card-cyberpunk.webp",
                 platforms: "PC | PLAYSTATION 5 | XBOX SERIES | SWITCH 2",
+                keywords: "keanu, disparos, rpg, futuro, distopia, v, edgerunners, implantes, netrunner",
                 difficulty: "Baja-Alta // Escalable por Cyberware",
                 lore: "Sobrevive en la megalópolis de Night City mientras un biochip experimental reescribe tu mente desde adentro.<br><br>" +
               "<strong>[ ARCHIVO 01: EL COLAPSO DE LA VIEJA RED Y LAS GUERRAS CORPORATIVAS ]</strong><br>" +
@@ -79,9 +82,10 @@
     hollowknight: {
         title: "HOLLOW KNIGHT",
         badge: "EXPEDIENTE #004 // TEAM CHERRY",
-        cardImage: "IMG/HOLLOWKNIGHT.jpg",
-        image: "IMG/banner-hollowknight.jpg",
+        cardImage: "IMG/card-hollowknight.webp",
+        image: "IMG/banner-hollowknight.webp",
         platforms: "PC | PLAYSTATION 5 | XBOX SERIES | NINTENDO SWITCH",
+        keywords: "metroidvania, insectos, indie, plataformas, 2d, dificil, team cherry, exploracion",
         difficulty: "Muy Alta // Precisión milimétrica y exploración",
         lore: "Desciende a las ruinas subterráneas de Hallownest y desentraña el sacrificio oculto tras la plaga que destruyó el reino.<br><br>" +
               "<strong>[ ARCHIVO 01: EL REY PÁLIDO Y EL RESPLANDOR OLVIDADO ]</strong><br>" +
@@ -104,9 +108,10 @@
     halo: {
         title: "HALO: COMBAT EVOLVED",
         badge: "EXPEDIENTE #005 // BUNGIE / 343 INDUSTRIES",
-        cardImage: "IMG/HALOCED.avif",
-        image: "IMG/banner-halo.webp",
-        platforms: "PC | XBOX SERIES",
+        cardImage: "IMG/card-halocamp.webp",
+        image: "IMG/banner-halocamp.webp",
+        platforms: "PC | XBOX SERIES | PLAYSTATION 5",
+        keywords: "master chief, xbox, disparos, aliens, espacio, ciencia ficcion, anillos, fps",
         difficulty: "Legendaria // Táctica de escudos y cobertura",
        lore: "Lidera la última resistencia humana como el Spartan-117 tras descubrir el letal mundo anillo conocido como Halo.<br><br>" +
               "<strong>[ ARCHIVO 01: EL PROYECTO SPARTAN-II Y LA CAÍDA DE REACH ]</strong><br>" +
@@ -129,9 +134,10 @@
     gearseday: {
         title: "GEARS OF WAR: E-DAY",
         badge: "EXPEDIENTE #006 // THE COALITION",
-        cardImage: "IMG/GOWEDAY",
+        cardImage: "IMG/card-goweday.webp",
         image: "IMG/banner-goweday.webp",
         platforms: "PC | XBOX SERIES",
+        keywords: "marcus, dom, locus, motosierra, xbox, disparos, guerra, apocalipsis, shooter",
         difficulty: "Insane // Supervivencia táctica bajo fuego",
        lore: "Vive el terror del Día de la Emergencia cuando la Horda Locust surgió del subsuelo para aniquilar el planeta Sera.<br><br>" +
               "<strong>[ ARCHIVO 01: LA FIEBRE DEL ORO, LA IMULSIÓN Y LAS GUERRAS DEL PÉNDULO ]</strong><br>" +

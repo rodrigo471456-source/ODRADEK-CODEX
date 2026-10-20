@@ -11,6 +11,10 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #111111;
     color: #ffffff;
@@ -348,7 +352,7 @@ main {
 
 }
 
-.filter-tag.nav-link.active{
+.filter-tag.active{
 
     background-color: var(--neon-orange);
     color: #111111;

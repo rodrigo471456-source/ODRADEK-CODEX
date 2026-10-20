@@ -156,5 +156,87 @@
         engine: "UNREAL ENGINE 5",
         arsenal: "El rifle de asalto <mark>Lancer</mark> con bayoneta de motosierra es indispensable para el combate cuerpo a cuerpo contra los drones Locust. La escopeta <strong>Gnasher</strong> es la reina indiscutible de las distancias cortas.",
         threats: "Los <mark>Brumaks</mark> y los <strong>Berserkers</strong> blindados destruirán tus coberturas en segundos obligándote a usar fuego de cobertura pesado o explosivos tácticos para detener su avance."
+    },
+
+ghost_of_tsushima: {
+        title: "Ghost of Tsushima",
+        badge: "EXPEDIENTE #007 // SUCKER PUNCH", // Corregido: Sucker Punch, no CDPR
+        platforms: "PC | PlayStation 5",
+        cardImage: "IMG/card-ghostoftsushima.webp", // Corregido a versión card
+        image: "IMG/banner-ghostoftsushima.webp",
+        difficulty: "MEDIA-ALTA // COMBATE TÁCTICO",
+        keywords: "ghost of tsushima jin sakai samurai fantasma mongoles khotun khan katana posturas sigilo honor feudal japon kurosawa",
+        lore: `<strong>[ SÍNTESIS TÁCTICA ]</strong><br>
+        La transformación de un honorable samurái en un asesino de las sombras para salvar su hogar de una invasión implacable. Una historia sobre el precio de romper las tradiciones y el sacrificio personal por el bien de una nación.
+        <br><br>
+        <strong>[ EXPEDIENTE COMPLETO ]</strong><br>
+        En el año <strong>1274</strong>, el colosal <strong>Imperio Mongol</strong> liderado por <span style="color: #ff6b00;">Khotun Khan</span> desembarca en la isla de Tsushima. En la masacre de la <strong>Playa de Komoda</strong>, las fuerzas samurái son aniquiladas y su líder, el <span style="color: #ff6b00;">Señor Shimura</span>, es capturado. Su sobrino, <strong>Jin Sakai</strong>, sobrevive a duras penas gracias a Yuna, una ladrona local. Jin rápidamente comprende que el estricto <strong>Código Samurái</strong> de luchar de frente es inútil contra las tácticas brutales y el armamento superior de los mongoles.
+        <br><br>
+        Para liberar a su tío y recuperar la isla, Jin comienza a reclutar aliados, desde monjes guerreros hasta mercenarios, pero el verdadero cambio ocurre en su interior. Jin empieza a utilizar el sigilo, el asesinato por la espalda, explosivos y venenos. Estas tácticas infunden terror en los invasores, ganándose el apodo mítico de <span style="color: #ff6b00;">'El Fantasma de Tsushima'</span>. 
+        <br><br>
+        Aunque logran rescatar al Señor Shimura, la ideología de ambos colapsa. Shimura rechaza las tácticas de Jin por deshonrosas. En el asedio final al Castillo Shimura, Jin desobedece órdenes directas y envenena a todo un campamento mongol para evitar una matanza de sus propios hombres. Por esta traición al código, el <strong>Shogun de Japón</strong> lo declara traidor.
+        <br><br>
+        Tras asesinar a <span style="color: #ff6b00;">Khotun Khan</span> y desmantelar la invasión, Jin enfrenta su prueba más dolorosa: un duelo a muerte contra su propio tío, el Señor Shimura, ordenado por el Shogun. Al terminar el combate, Jin acepta su destino como proscrito, abandonando para siempre su título de samurái para vigilar Tsushima desde las sombras como el Fantasma.`,
+        tips: "La clave del combate es la <strong>adaptación fluida</strong>. Cambia de <mark>postura</mark> en milisegundos dependiendo del arma del enemigo: Piedra (Espadas), Agua (Escudos), Viento (Lanzas) o Luna (Brutos).",
+        campaignTime: "25 - 30 HORAS",
+        platinumTime: "60 - 70 HORAS",
+        metaBuild: "Armadura del Fantasma Nv. Max + Amuletos de Terror/Veneno",
+        engine: "SUCKER PUNCH PROPRIETARY ENGINE",
+        arsenal: "La <mark>Katana de la familia Sakai</mark> es tu arma cuerpo a cuerpo inmutable. Compleméntala con herramientas del Fantasma: <strong>Kunais</strong> para desequilibrar grupos y <mark>Bombas de Humo</mark> para asesinatos en cadena o retiradas tácticas.",
+        threats: "Los <strong>Brutos con escudos pesados</strong> y los <strong>Perros mongoles</strong> pueden romper tu postura rápidamente. Elimina siempre a los arqueros primero antes de comprometerte en combate cerrado."
+    },
+    gow_ragnarok: {
+        title: "God of War Ragnarök",
+        badge: "EXPEDIENTE #008 // SANTA MONICA",
+        platforms: "PC | PlayStation 5",
+        cardImage: "IMG/card-gowragnarok.webp",
+        image: "IMG/banner-gowragnarok.webp",
+        difficulty: "MEDIA-ALTA // COMBATE VISCERAL",
+        keywords: "god of war ragnarok kratos atreus loki freya thor odin asgard midgard mitologia nordica hacha leviatan blades of chaos",
+        lore: `<br>
+        Ante el inminente fin del mundo nórdico, un padre y un hijo deben decidir si confían en profecías que auguran tragedia o si forjan su propio destino. Una epopeya sobre el perdón, la redención y cómo romper los ciclos de violencia.
+        <br><br>
+        <strong>[ EXPEDIENTE COMPLETO ]</strong><br>
+        El <strong>Fimbulvetr</strong> (el gran invierno) azota los Nueve Reinos, anunciando la llegada del <span style="color: #ff6b00;">Ragnarök</span>. <span style="color: #ff6b00;">Kratos</span> y <span style="color: #ff6b00;">Atreus</span> se ocultan en Midgard, pero la paz termina cuando el Dios del Trueno, <strong>Thor</strong>, y el Padre de Todo, <strong>Odín</strong>, irrumpen en su hogar. Atreus, que descubrió ser el gigante profetizado <strong>Loki</strong>, busca desesperadamente el Dios de la Guerra nórdico, Tyr, para entender su propósito, mientras Kratos teme una profecía que augura su propia muerte.
+        <br><br>
+        El viaje los lleva a explorar los reinos, reencontrándose con aliados como Sindri y Brok, e intentando hacer las paces con <strong>Freya</strong>, quien clama venganza por la muerte de su hijo Baldur. Atreus, en su rebeldía, viaja en secreto a <strong>Asgard</strong> para manipular a Odín, pero descubre que el Padre de Todo lo está usando para descifrar una fisura universal que contiene conocimiento infinito. Mientras tanto, Kratos debe aceptar que no puede proteger a Atreus para siempre y forja la <span style="color: #ff6b00;">Lanza Draupnir</span>, un arma letal nacida de su propia sangre espartana.
+        <br><br>
+        El clímax estalla cuando se revela que el Tyr que rescataron era en realidad <strong>Odín disfrazado</strong>, quien asesina a Brok y huye. Destrozados, los aliados unen a los Nueve Reinos para un asalto masivo contra Asgard. En la guerra final, Kratos perdona a Thor, pero Odín lo asesina por desobediencia. 
+        <br><br>
+        Tras derrotar a Odín y observar la destrucción de Asgard a manos del gigante Surtr, Atreus decide partir solo para buscar a los Gigantes perdidos. Kratos, ahora solo, descubre un santuario oculto que no profetiza su muerte, sino su futuro como <strong>un Dios reconstruido y amado por su pueblo</strong>, dándole por fin la paz que buscó desde que salió de Grecia.`,
+        tips: "No trates a Kratos como un tanque inamovible; domina los <mark>Parries (bloqueos perfectos)</mark> con escudos ligeros (como el Escudo de Osadía) para abrir ventanas de aturdimiento masivo en los jefes.",
+        campaignTime: "30 - 35 HORAS",
+        platinumTime: "55 - 60 HORAS",
+        metaBuild: "Armadura de Berserker (Daño/Enfriamiento) + Pomos de Curación Rúnica",
+        engine: "SANTA MONICA STUDIO ENGINE",
+        arsenal: "Alternar armamento es vital. El <mark>Hacha Leviatán</mark> congela y controla masas, las <strong>Espadas del Caos</strong> barren áreas amplias con daño de quemadura, y la <mark>Lanza Draupnir</mark> permite detonaciones remotas precisas.",
+        threats: "El <strong>Rey Hrolf Kraki</strong> y la <strong>Reina Valquiria Gná</strong> son los mayores retos post-game, exigiendo reflejos impecables y conocimiento absoluto de tus tiempos de enfriamiento rúnico."
+    },
+    tlou_part_2: {
+        title: "The Last of Us Part II",
+        badge: "EXPEDIENTE #009 // NAUGHTY DOG",
+        platforms: "PlayStation 5",
+        cardImage: "IMG/card-tlou2.webp",
+        image: "IMG/banner-tlou2.webp",
+        difficulty: "ALTA // SUPERVIVENCIA TÁCTICA",
+        keywords: "the last of us part 2 tlou2 ellie abby joel chasqueadores infectados seattle venganza sigilo naughty dog cordyceps",
+        lore: `<strong>[ SÍNTESIS TÁCTICA ]</strong><br>
+        Un desgarrador descenso a los infiernos del rencor humano. Dos mujeres atadas por el trauma y el dolor emprenden un viaje de violencia implacable que cuestiona hasta dónde es capaz de llegar la humanidad para cobrar una deuda de sangre en un mundo devastado.
+        <br><br>
+        <strong>[ EXPEDIENTE COMPLETO ]</strong><br>
+        Años después de que <span style="color: #ff6b00;">Joel</span> salvara a <span style="color: #ff6b00;">Ellie</span> de los Luciérnagas, condenando a la humanidad a vivir con la infección del <strong>Cordyceps</strong>, ambos habitan en el seguro campamento de <strong>Jackson</strong>. Sin embargo, su frágil relación se destruye cuando un grupo de extraños embosca y asesina brutalmente a Joel frente a los ojos de Ellie. La líder del grupo es <span style="color: #ff6b00;">Abby</span>, hija del cirujano de los Luciérnagas que Joel mató para salvar a Ellie.
+        <br><br>
+        Consumida por el odio, Ellie viaja a la ruinosa ciudad de <strong>Seattle</strong> junto a su pareja, Dina, para cazar uno a uno a los asesinos de Joel. Durante tres sangrientos días, Ellie se sumerge en una espiral de violencia sádica, cruzando fuego en medio de una guerra territorial entre la facción militar <strong>WLF (Lobos)</strong> y el culto religioso de los <strong>Serafitas (Cicatrices)</strong>. Ellie sacrifica su propia humanidad, torturando y matando a los amigos de Abby.
+        <br><br>
+        La historia cambia de perspectiva obligando a vivir los mismos tres días desde los ojos de <strong>Abby</strong>, revelando que sus motivaciones nacieron del mismo dolor que las de Ellie. Abby encuentra su redención al proteger a dos niños desertores Serafitas, Lev y Yara, traicionando a su propia facción militar. Cuando los caminos de ambas mujeres chocan en un teatro, Abby perdona la vida de Ellie y se marcha.
+        <br><br>
+        Años después, Ellie vive en una pacífica granja con Dina y su bebé, pero el estrés postraumático la consume. Incapaz de dejar ir a Joel, viaja a <strong>Santa Bárbara</strong> para cazar a Abby una última vez. Tras encontrarla desnutrida y esclavizada por un grupo de bandidos, se baten en un violento duelo cuerpo a cuerpo en el océano. En el momento en que Ellie está a punto de ahogarla, recuerda el rostro pacífico de Joel y decide soltarla, perdonándola. Al regresar a la granja, Ellie la encuentra vacía; ha perdido a Dina, sus dedos y su conexión con Joel, quedando sola con las consecuencias de su venganza.`,
+        tips: "Aprovecha la verticalidad y la vegetación alta para el sigilo. Usa la mecánica de <mark>esquivar (L1)</mark> justo antes de recibir un impacto cuerpo a cuerpo para contraatacar de forma letal o escapar.",
+        campaignTime: "25 - 30 HORAS",
+        platinumTime: "35 - 45 HORAS",
+        metaBuild: "Ramas de Sigilo/Supervivencia Maximizadas + Escopeta Mejorada",
+        engine: "Naughty Dog Engine",
+        arsenal: "Ellie destaca con el <strong>Arco</strong> y trampas explosivas; Abby domina el combate frontal con la <strong>Ballesta de caza</strong> y armamento militar pesado. Ambas se benefician de las botellas/ladrillos para aturdimientos rápidos.",
+        threats: "Los <strong>Acechadores (Stalkers)</strong> no aparecen en el Modo Escucha, obligándote a detectarlos visualmente. El aterrador <strong>Rey Rata (Rat King)</strong> en el hospital exige movilidad constante y todo el fuego pesado que poseas."
     }
         };

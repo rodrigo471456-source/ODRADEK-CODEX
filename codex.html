@@ -9,7 +9,7 @@
 <body>
 
   <!-- BLOQUE 1: ENCABEZADO SUPERIOR -->
-<header>
+  <header>
     <a href="index.html" class="brand-container">
         <span class="hud-indicator"></span>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="32" height="32" class="brand-logo" alt="Odradek">
@@ -39,11 +39,21 @@
 
   <main class="codex-container">
 
-    <!-- BLOQUE 2: IDENTIFICACIÓN DEL JUEGO Y BANNER -->
+    <!-- BLOQUE 2: IDENTIFICACIÓN DEL JUEGO Y ACCIÓN DE FAVORITO -->
     <div class="codex-header">
-        <span id="game-badge" class="game-badge" style="margin: 0 0 10px 0;">CARGANDO...</span>
-        <h1 id="game-title" class="hero-title">ESCANEANDO REGISTRO...</h1>
-        <p id="game-platforms" style="color: var(--neon-orange); font-weight: bold; letter-spacing: 1px;"></p>
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 20px;">
+            <div>
+                <span id="game-badge" class="game-badge" style="margin: 0 0 10px 0;">CARGANDO...</span>
+                <h1 id="game-title" class="hero-title">ESCANEANDO REGISTRO...</h1>
+                <p id="game-platforms" style="color: var(--neon-orange); font-weight: bold; letter-spacing: 1px;"></p>
+            </div>
+            
+            <!-- Botón de guardado táctico en memoria -->
+            <button id="btn-codex-fav" class="btn-fav-codex" aria-label="Fijar expediente">
+                <span class="fav-icon">★</span>
+                <span class="fav-label">FIJAR EXPEDIENTE</span>
+            </button>
+        </div>
     </div>
 
     <div class="codex-banner">
@@ -74,9 +84,9 @@
     <section class="protocol-section" style="max-width: 100%; margin-top: 30px; border: none; padding: 0; background: transparent; box-shadow: none;">
         
         <div class="tabs-header">
-            <button class="tab-btn active" onclick="openTab('lore', event)">[ LORE / SINOPSIS ]</button>
-            <button class="tab-btn" onclick="openTab('arsenal', event)">[ ARSENAL / BUILDS ]</button>
-            <button class="tab-btn" onclick="openTab('amenazas', event)">[ JEFES / AMENAZAS ]</button>
+            <button class="tab-btn active" data-tab="lore">[ LORE / SINOPSIS ]</button>
+            <button class="tab-btn" data-tab="arsenal">[ ARSENAL / BUILDS ]</button>
+            <button class="tab-btn" data-tab="amenazas">[ JEFES / AMENAZAS ]</button>
         </div>
 
         <div id="tab-lore" class="tab-content active" style="border-left-color: #00c0ff;">
@@ -105,86 +115,13 @@
   </main>
 
   <footer>
-    <small> ODRADEK 2026 // CONEXION A BASE DE DATOS ACTIVA</small>
+    <small>ODRADEK 2026 // CONEXION A BASE DE DATOS ACTIVA</small>
   </footer>
 
-  <!-- BLOQUE 6: CEREBRO JAVASCRIPT DEL CODEX -->
+  <!-- INFRAESTRUCTURA Y CEREBRO MODULAR DEL CODEX -->
   <script src="database.js"></script>
-  <script>
-    const urlParams = new URLSearchParams(window.location.search);
-    // Si abres codex.html directo sin elegir juego, carga 'deathstranding' por defecto
-    const gameKey = urlParams.get('id') || 'deathstranding';
-    const selectedGame = codexDatabase[gameKey];
-
-if (selectedGame) {
-        document.getElementById('game-title').textContent = selectedGame.title;
-        document.getElementById('game-badge').textContent = selectedGame.badge;
-        document.getElementById('game-img').src = selectedGame.image;
-        document.getElementById('game-platforms').textContent = selectedGame.platforms;
-        document.getElementById('game-difficulty').textContent = selectedGame.difficulty;
-        document.title = `ODRADEK - ${selectedGame.title}`;
-        
-        // Programación defensiva: si la llave no existe aún en database.js, muestra un estado táctico por defecto
-        document.getElementById('game-campaign').textContent = selectedGame.campaignTime || "EN ESCANEO...";
-        document.getElementById('game-platinum').textContent = selectedGame.platinumTime || "EN ESCANEO...";
-        document.getElementById('game-build').textContent = selectedGame.metaBuild || "CLASIFICADO";
-        document.getElementById('game-engine').textContent = selectedGame.engine || "DESCONOCIDO";
-
-        document.getElementById('game-lore').innerHTML = selectedGame.lore || "Sin registros en la Red Quiral.";
-        document.getElementById('game-tips').innerHTML = selectedGame.tips || "Directivas de combate pendientes de sincronización.";
-        document.getElementById('game-arsenal').innerHTML = selectedGame.arsenal || "Armamento táctico en proceso de desencriptación.";
-        document.getElementById('game-amenazas').innerHTML = selectedGame.threats || "Perfiles hostiles en análisis.";
-    } else {
-        document.getElementById('game-title').textContent = "ERROR 404 // REGISTRO NO ENCONTRADO";
-        document.getElementById('game-badge').textContent = "ACCESO DENEGADO";
-        document.getElementById('game-lore').innerHTML = "El identificador solicitado no existe en la base de datos del Odradek.";
-        document.getElementById('game-img').style.display = 'none';
-    }
-
-    // Motor de audio táctico para el Codex
-    const AudioContext = window.AudioContext || window.webkitAudioContext;
-    const audioCtx = new AudioContext();
-
-    function playTechSound(freq, type, duration, vol) {
-        if (audioCtx.state === 'suspended') audioCtx.resume();
-        const oscillator = audioCtx.createOscillator();
-        const gainNode = audioCtx.createGain();
-
-        oscillator.type = type;
-        oscillator.frequency.setValueAtTime(freq, audioCtx.currentTime);
-        gainNode.gain.setValueAtTime(vol, audioCtx.currentTime);
-        gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + duration);
-
-        oscillator.connect(gainNode);
-        gainNode.connect(audioCtx.destination);
-        oscillator.start();
-        oscillator.stop(audioCtx.currentTime + duration);
-    }
-
-    function openTab(tabId, event) {
-        const contents = document.querySelectorAll('.tab-content');
-        contents.forEach(c => c.classList.remove('active'));
-
-        const buttons = document.querySelectorAll('.tab-btn');
-        buttons.forEach(b => b.classList.remove('active'));
-
-        document.getElementById('tab-' + tabId).classList.add('active');
-        event.currentTarget.classList.add('active');
-
-        // Pulso sonoro al cambiar de pestaña
-        playTechSound(900, 'sine', 0.08, 0.05);
-    }
-
-    function openTab(tabId, event) {
-        const contents = document.querySelectorAll('.tab-content');
-        contents.forEach(c => c.classList.remove('active'));
-
-        const buttons = document.querySelectorAll('.tab-btn');
-        buttons.forEach(b => b.classList.remove('active'));
-
-        document.getElementById('tab-' + tabId).classList.add('active');
-        event.currentTarget.classList.add('active');
-    }
-  </script>
+  <script src="js/audio.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/codex.js"></script>
 </body>
 </html>

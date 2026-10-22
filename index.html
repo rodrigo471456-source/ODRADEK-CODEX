@@ -92,6 +92,8 @@
                 <button class="tag tag-ps filter-tag" data-platform="playstation">PLAYSTATION 5</button>
                 <button class="tag tag-xbox filter-tag" data-platform="xbox">XBOX SERIES</button>
                 <button class="tag tag-nintendo filter-tag" data-platform="nintendo">NINTENDO SWITCH</button>
+                <button class="tag filter-tag tag-fav" data-platform="favorites"> ★ FAVORITOS <span id="fav-count" class="fav-counter">[ 0 ]</span>
+</button>
             </div>
 
             <!-- Contenedor dinámico: JS inyecta las tarjetas aquí -->
@@ -102,6 +104,12 @@
                 <h3 style="color: #ff3333; font-family: monospace; font-size: 1.5rem; letter-spacing: 2px; margin-bottom: 10px;">[ // ERROR 404: EXPEDIENTE NO LOCALIZADO x.x // ]</h3>
                 <p style="color: #888; font-family: monospace;">La red ODRADEK no encontró coincidencias en los registros activos. Intenta otra vez.</p>
             </div>
+
+            <!-- Alerta táctica: se activa cuando el filtro de favoritos está en 0 -->
+<div id="no-favorites" style="display: none; text-align: center; padding: 40px 20px; border: 1px dashed var(--neon-orange); background: rgba(255, 107, 0, 0.05); margin-top: 20px; border-radius: 4px;">
+    <h3 style="color: var(--neon-orange); font-family: monospace; font-size: 1.5rem; letter-spacing: 2px; margin-bottom: 10px;">[ // REGISTRO DE FAVORITOS VACÍO // ]</h3>
+    <p style="color: #888; font-family: monospace;">No has fijado ningún expediente en la memoria rápida. Pulsa la estrella en cualquier tarjeta para sincronizarla.</p>
+</div>
         </section>
     </main>
 
@@ -109,281 +117,13 @@
         <small>ODRADEK 2026 TODOS LOS DERECHOS RESERVADOS</small>
     </footer>
 
-    <!-- Conexión a base de datos y lógica principal -->
+<!-- Conexión a base de datos y lógica principal -->
     <script src="database.js"></script>
-    <script>
-        // Referencias a elementos del DOM
-        const gridContainer = document.querySelector('.game-grid');
-        const searchInput = document.querySelector('.search-input');
-        const btnScan = document.querySelector('.btn-scan');
-        const screenScanner = document.querySelector('.screen-scanner');
-        const noResultsMsg = document.getElementById('no-results');
-
-        // 1. Generación e inyección de tarjetas desde database.js
-        let cardsHTML = '';
-
-        for (const key in codexDatabase) {
-            const game = codexDatabase[key];
-
-            // Asigna clases de color según cada plataforma
-            const tagsHTML = game.platforms.split('|').map(plat => {
-                const p = plat.trim();
-                const pLower = p.toLowerCase();
-                let tagClass = 'tag';
-                let label = p;
-
-                if (pLower.includes('pc')) {
-                    tagClass += ' tag-pc';
-                } else if (pLower.includes('playstation') || pLower.includes('ps')) {
-                    tagClass += ' tag-ps';
-                } else if (pLower.includes('xbox')) {
-                    tagClass += ' tag-xbox';
-                } else if (pLower.includes('switch') || pLower.includes('nintendo')) {
-                    tagClass += ' tag-nintendo';
-                    if (!pLower.includes('nintendo')) label = 'NINTENDO ' + p;
-                }
-
-                return `<span class="${tagClass}">${label}</span>`;
-            }).join('');
-
-            // Construye la tarjeta con carga diferida (lazy) y palabras clave ocultas
-            cardsHTML += `
-            <article class="game-card" style="display: flex;" data-keywords="${game.keywords || ''}">
-                <div class="card-image">
-                    <img src="${game.cardImage}" alt="${game.title}" width="300" loading="lazy">
-                    <span class="game-badge">${game.badge.split('//')[0].trim()}</span>
-                </div>
-                <div class="card-content">
-                    <div class="card-tags">${tagsHTML}</div>
-                    <h3>${game.title}</h3>
-                    <p class="card-excerpt">${game.lore.replace(/<[^>]*>?/gm, '').substring(0, 110)}...</p>
-                    <div class="card-footer">
-                        <span class="card-metric">Dificultad <strong>${game.difficulty.split('//')[0]}</strong></span>
-                        <a href="codex.html?id=${key}" class="btn-card">ACCEDER AL CODEX</a>
-                    </div>
-                </div>
-            </article>
-            `;
-        }
-
-        gridContainer.innerHTML = cardsHTML;
-
-        // 2. Buscador inteligente (Deep Scan), Easter Egg y alerta 404
-        const gameCards = document.querySelectorAll('.game-card');
-
-        function filterGames() {
-            const query = searchInput.value.toLowerCase().trim();
-
-            // Detonador del Protocolo Mapache
-            if (query === "mapache" || query === "lyrod" || query === "rodu") {
-                document.getElementById('mapache-protocol').style.display = 'flex';
-                playTechSound(150, 'sawtooth', 0.8, 0.1);
-                searchInput.value = '';
-                return;
-            }
-
-            let cartasVisibles = 0;
-
-            gameCards.forEach(card => {
-                const title = card.querySelector('h3').textContent.toLowerCase();
-                const platforms = card.querySelector('.card-tags').textContent.toLowerCase();
-                const keywords = card.getAttribute('data-keywords').toLowerCase();
-
-                if (title.includes(query) || platforms.includes(query) || keywords.includes(query)) {
-                    card.style.display = 'flex';
-                    cartasVisibles++;
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-
-            // Muestra u oculta el mensaje 404 según el contador
-            if (cartasVisibles === 0) {
-                if (noResultsMsg.style.display === 'none') {
-                    playTechSound(220, 'sawtooth', 0.2, 0.04);
-                }
-                noResultsMsg.style.display = 'block';
-            } else {
-                noResultsMsg.style.display = 'none';
-            }
-        }
-
-        // Cerrar modal del Easter Egg
-        document.getElementById('btn-cerrar-mapache').addEventListener('click', () => {
-            document.getElementById('mapache-protocol').style.display = 'none';
-            playTechSound(800, 'sine', 0.1, 0.05);
-        });
-
-        // Animación de barrido al escanear
-        function triggerScannerEffect() {
-            screenScanner.classList.add('scanning');
-            setTimeout(() => {
-                screenScanner.classList.remove('scanning');
-            }, 200);
-        }
-
-        searchInput.addEventListener('input', filterGames);
-
-        btnScan.addEventListener('click', (e) => {
-            e.preventDefault();
-            triggerScannerEffect();
-            filterGames();
-        });
-
-        // 3. Filtros por botones de plataforma
-        const filterTags = document.querySelectorAll('.filter-tag');
-
-        filterTags.forEach(btn => {
-            btn.addEventListener('click', () => {
-                filterTags.forEach(t => t.classList.remove('active'));
-                btn.classList.add('active');
-
-                const selectedPlatform = btn.getAttribute('data-platform');
-
-                gameCards.forEach(card => {
-                    const cardTagsText = card.querySelector('.card-tags').textContent.toLowerCase();
-                    if (selectedPlatform === 'all' || cardTagsText.includes(selectedPlatform)) {
-                        card.style.display = 'flex';
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
-            });
-        });
-
-        // 4. Sintetizador de efectos de sonido (Web Audio API)
-        const AudioContext = window.AudioContext || window.webkitAudioContext;
-        const audioCtx = new AudioContext();
-
-        function playTechSound(freq, type, duration, vol) {
-            if (audioCtx.state === 'suspended') audioCtx.resume();
-
-            const oscillator = audioCtx.createOscillator();
-            const gainNode = audioCtx.createGain();
-
-            oscillator.type = type;
-            oscillator.frequency.setValueAtTime(freq, audioCtx.currentTime);
-
-            gainNode.gain.setValueAtTime(vol, audioCtx.currentTime);
-            gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + duration);
-
-            oscillator.connect(gainNode);
-            gainNode.connect(audioCtx.destination);
-
-            oscillator.start();
-            oscillator.stop(audioCtx.currentTime + duration);
-        }
-
-        // Eventos de sonido en interfaz
-        filterTags.forEach(btn => {
-            btn.addEventListener('mouseenter', () => {
-                playTechSound(1200, 'sine', 0.1, 0.05);
-            });
-        });
-
-        btnScan.addEventListener('click', () => {
-            playTechSound(400, 'square', 0.1, 0.05);
-            setTimeout(() => playTechSound(800, 'square', 0.15, 0.05), 100);
-        });
-
-// 5. PERSISTENCIA DE ESTADO (LOCALSTORAGE) - SISTEMA DE LOGIN TÁCTICO
-        const btnLogin = document.getElementById('btn-login');
-
-        // A. Función para pintar la interfaz según el estado de la memoria
-        function updateLoginUI(agentName) {
-            if (agentName) {
-                btnLogin.textContent = `[ AGENTE: ${agentName.toUpperCase()} ]`;
-                btnLogin.style.color = '#00c0ff';
-                btnLogin.style.borderColor = '#00c0ff';
-            }
-        }
-
-        // B. Al cargar la página, el Odradek revisa si ya hay un agente guardado
-        const savedAgent = localStorage.getItem('odradek_agent');
-        if (savedAgent) {
-            updateLoginUI(savedAgent);
-        }
-
-        // C. Intercepción del clic en el botón
-        btnLogin.addEventListener('click', (e) => {
-            e.preventDefault(); // 
-            
-
-            if (localStorage.getItem('odradek_agent')) {
-                if (confirm("¿Deseas cerrar tu conexión actual con la Red Quiral?")) {
-                    localStorage.removeItem('odradek_agent'); 
-                    btnLogin.textContent = "INICIAR SESIÓN";
-                    btnLogin.style.color = "var(--neon-orange)";
-                    btnLogin.style.borderColor = "var(--neon-orange)";
-                    playTechSound(300, 'sawtooth', 0.15, 0.05); 
-                }
-            } else {
-                // Si no hay memoria, levantamos un prompt para pedir el dato
-                const agentName = prompt("IDENTIFICACIÓN REQUERIDA // Ingresa tu alias de operador:");
-                
-                if (agentName && agentName.trim() !== "") {
-                    localStorage.setItem('odradek_agent', agentName.trim()); 
-                    updateLoginUI(agentName.trim());
-                    playTechSound(1200, 'sine', 0.15, 0.05); 
-                }
-            }
-        });
-// 6. CONTROL DE NAVEGACIÓN - SCROLL TÁCTICO (ALGORITMO MATEMÁTICO CUSTOM)
-        const btnCatalogo = document.getElementById('btn-catalogo');
-        const seccionCatalogo = document.getElementById('catalogo');
-
-        btnCatalogo.addEventListener('click', (e) => {
-            e.preventDefault(); 
-            playTechSound(600, 'sine', 0.1, 0.05); // Sonido táctico
-            
-            // 1. Calculamos la física del viaje
-            const targetPosition = seccionCatalogo.getBoundingClientRect().top + window.scrollY;
-            const startPosition = window.scrollY;
-            const distance = targetPosition - startPosition;
-            const duration = 800; // Duración del viaje en milisegundos (0.8 segundos)
-            let startTimestamp = null;
-
-            // 2. Motor de animación a 60 FPS
-            function step(timestamp) {
-                if (!startTimestamp) startTimestamp = timestamp;
-                const progress = timestamp - startTimestamp;
-                
-                // Calculamos el porcentaje de tiempo transcurrido (de 0 a 1)
-                const percentage = Math.min(progress / duration, 1);
-                
-                // Easing (Frenado suave: acelera rápido y frena lento al llegar)
-                const easeOutQuart = 1 - Math.pow(1 - percentage, 4);
-                
-                // Movemos la cámara matemáticamente
-                window.scrollTo(0, startPosition + (distance * easeOutQuart));
-                
-                // Si el tiempo no ha terminado, pedimos el siguiente frame (fotograma)
-                if (progress < duration) {
-                    window.requestAnimationFrame(step);
-                }
-            }
-            
-            // 3. Encendemos el motor
-            window.requestAnimationFrame(step);
-        });
-
-        const btnSugerencias = document.getElementById('btn-sugerencias');
-        const correoOperador = "rodrigo471456@gmail.com";
-
-       const asunto = encodeURIComponent("Reporte de Inteligencia - Odradek");
-
-        btnSugerencias.addEventListener('click', (e) => {
-            e.preventDefault(); 
-            playTechSound(800, 'square', 0.1, 0.05); // Sonido táctico
-            
-            // Construimos la URL nativa de redacción de Gmail
-            const gmailURL = `https://mail.google.com/mail/?view=cm&fs=1&to=${correoOperador}&su=${asunto}`;
-            
-            // Abrimos la pestaña forzando el editor web de Gmail
-            window.open(gmailURL, '_blank');
-        });
-
-    </script>
+<!-- Módulos de infraestructura -->
+    <script src="js/audio.js"></script>
+    <script src="js/storage.js"></script>
+ <!-- Orquestador principal de la interfaz -->
+    <script src="js/app.js"></script>
 </body>
 </html>
 

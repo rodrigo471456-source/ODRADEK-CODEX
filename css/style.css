@@ -695,6 +695,120 @@ footer {
     animation: fadeIn 0.3s ease-in-out;
 }
 
+.card-image {
+    position: relative;
+}
+
+.btn-fav{
+
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 34px;
+    height: 34px;
+    background: rgba(10, 10, 10, 0.75);
+    border: 1px solid #444;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index:  5;
+    transition: all 0.2s ease;
+    backdrop-filter: blur(4px);
+    padding: 0;
+}
+
+.btn-fav svg{
+    width: 18px;
+    height: 18px;
+    fill: none;
+    stroke: #888; 
+    stroke-width: 2;
+    transition: all 0.2s ease;
+}
+
+.btn-fav:hover {
+    border-color: #ff6b00;
+    transform: scale(1.08);
+}
+
+.btn-fav:hover svg {
+    stroke: #ff6b00;
+}
+
+.btn-fav.active {
+    background: rgba(255, 107, 0, 0.15);
+    border-color: #ff6b00;
+    box-shadow: 0 0 10px rgba(255, 107, 0, 0.4);
+}
+
+.btn-fav.active svg {
+    fill: #ff6b00;
+    stroke: #ff6b00;
+}
+
+/* Botón de fijado en cabecera del Codex */
+.btn-fav-codex {
+    background: rgba(20, 20, 20, 0.8);
+    border: 1px solid #444;
+    color: #aaa;
+    font-family: monospace;
+    font-size: 0.85rem;
+    letter-spacing: 1.5px;
+    padding: 10px 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+    backdrop-filter: blur(4px);
+    text-transform: uppercase;
+}
+
+.btn-fav-codex .fav-icon {
+    font-size: 1.1rem;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.btn-fav-codex:hover {
+    border-color: #ff6b00;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 107, 0, 0.2);
+}
+
+.btn-fav-codex:hover .fav-icon {
+    transform: scale(1.2);
+    color: #ff6b00;
+}
+
+/* Estado activo: Expediente guardado */
+.btn-fav-codex.active {
+    background: rgba(255, 107, 0, 0.15);
+    border-color: #ff6b00;
+    color: #ff6b00;
+    box-shadow: 0 0 15px rgba(255, 107, 0, 0.35);
+}
+
+.btn-fav-codex.active .fav-icon {
+    color: #ff6b00;
+    text-shadow: 0 0 8px #ff6b00;
+}
+
+.fav-counter{
+    color: var(--neon-orange);
+    font-weight: bold;
+    margin-left: 4px;
+    letter-spacing: 1px;
+}
+
+
+.filter-tag.tag-fav.active .fav-counter {
+    color: #fff;
+    text-shadow: 0 0 6px #fff;
+}
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(5px); }
     to { opacity: 1; transform: translateY(0); }

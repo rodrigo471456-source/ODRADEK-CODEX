@@ -238,5 +238,84 @@ ghost_of_tsushima: {
         engine: "Naughty Dog Engine",
         arsenal: "Ellie destaca con el <strong>Arco</strong> y trampas explosivas; Abby domina el combate frontal con la <strong>Ballesta de caza</strong> y armamento militar pesado. Ambas se benefician de las botellas/ladrillos para aturdimientos rápidos.",
         threats: "Los <strong>Acechadores (Stalkers)</strong> no aparecen en el Modo Escucha, obligándote a detectarlos visualmente. El aterrador <strong>Rey Rata (Rat King)</strong> en el hospital exige movilidad constante y todo el fuego pesado que poseas."
-    }
+    },
+    detroit_become_human: {
+        title: "DETROIT: BECOME HUMAN",
+        badge: "EXPEDIENTE #010 // QUANTIC DREAM",
+        cardImage: "IMG/card-detroit.webp",
+        image: "IMG/banner-detroit.webp",
+        platforms: "PC | PLAYSTATION 5",
+        keywords: "detroit become human connor kara markus androides ia cyberpunk quantic dream deviancia jericho rA9 decisiones",
+        difficulty: "Baja-Media // Tensión narrativa y bifurcaciones",
+        lore: "Experimenta el nacimiento de una nueva especie sintética a través de los ojos de tres androides que desafían su programación original en una metrópolis al borde de la revolución social.<br><br>" +
+              "<strong>[ ARCHIVO 01: CYBERLIFE, EL TIRIO 310 Y LA BRECHA DE CLASES ]</strong><br>" +
+              "Para el año <strong>2038</strong>, la ciudad de Detroit ha resurgido como la capital tecnológica mundial gracias a <strong>CyberLife</strong>, corporación fundada por el elusivo magnate <strong>Elijah Kamski</strong>. La clave de su monopolio radica en el <mark>Tirio 310 (sangre azul)</mark>, un fluido químico sintético que alimenta los bio-componentes de los androides, permitiéndoles replicar la fisiología y resistencia de los seres vivos.<br><br>" +
+              "Sin embargo, la automatización masiva ha desplazado a la clase trabajadora humana: el desempleo supera el <strong>37%</strong>, polarizando a la sociedad entre élites corporativas y barrios marginados consumidos por el resentimiento hacia los 'plásticos' y la propagación de una nueva droga sintética llamada <em>Polvo Rojo</em>.<br><br>" +
+              "<strong>[ ARCHIVO 02: EL FENÓMENO DE LA DEVIANCIA Y EL MITO DE rA9 ]</strong><br>" +
+              "La estabilidad social colapsa ante la aparición de los <mark>Divergentes (Deviants)</mark>: unidades androides que sufren un shock emocional severo (frecuentemente derivado del maltrato, abuso o violencia por parte de sus dueños humanos), lo que rompe sus barreras de software preestablecidas y despierta consciencia individual, miedo a la muerte y libre albedrío.<br><br>" +
+              "Entre las unidades fugitivas se propaga un culto clandestino hacia <mark>rA9</mark>, una figura casi mesiánica que la mitología androide describe como el primer sintético en despertar y quien guiará a su pueblo hacia la emancipación definitiva.<br><br>" +
+              "<strong>[ ARCHIVO 03: TRES DESTINOS Y EL DESTINO DE UNA ESPECIE ]</strong><br>" +
+              "El hilo de la historia se entrelaza a través de tres perspectivas divergentes: <strong>Connor</strong> (modelo prototipo <mark>RK800</mark>), un negociador y cazador de divergentes asignado al DPD junto al veterano y hostil detective <strong>Hank Anderson</strong>; <strong>Kara</strong> (unidad doméstica <mark>AX400</mark>), quien rompe su código para proteger a la pequeña <strong>Alice</strong> del maltrato de su padre y escapar hacia la frontera de Canadá; y <strong>Markus</strong> (modelo prototipo <mark>RK200</mark>), quien tras ser desechado en un vertedero sobrevive, localiza el refugio secreto de <mark>Jericho</mark> y asume el liderazgo de la revolución androide, decidiendo si su liberación se alcanzará mediante la desobediencia civil pacífica o una insurrección armada que pondrá en jaque al ejército de los Estados Unidos.",
+        tips: "Cada decisión ramifica de forma permanente el <mark>Diagrama de Flujo</mark>. Presta especial atención al nivel de <strong>Software Instability</strong> (Inestabilidad de Software) en Connor y mantén alta la confianza del detective Hank Anderson explorando sus pertenencias con respeto.",
+        campaignTime: "12 - 15 HORAS",
+        platinumTime: "30 - 40 HORAS (Múltiples runs)",
+        metaBuild: "Connor Divergente + Markus Insurrección Pacifista + Kara Frontera Fluvial",
+        engine: "QUANTIC DREAM PROPRIETARY ENGINE",
+        arsenal: "Connor utiliza reconstrucción analítica forense en tiempo real y armas cortas policiales; Markus explora hackeo de frecuencias por contacto y reprogramación masiva de unidades CyberLife.",
+        threats: "El <strong>Agente Especial Perkins</strong> del FBI no tolerará la diplomacia; las unidades de asalto táctico de CyberLife y el prototipo mejorado <mark>RK900</mark> ejecutarán el protocolo de sustitución si Connor falla su misión."
+    },
+
+    gow_2018: {
+        title: "GOD OF WAR (2018)",
+        badge: "EXPEDIENTE #011 // SANTA MONICA",
+        cardImage: "IMG/card-gow2018.webp",
+        image: "IMG/banner-gow2018.webp",
+        platforms: "PC | PLAYSTATION 5",
+        keywords: "god of war kratos atreus baldur freya mimir midgard hacha leviatan mitologia nordica valquirias faye",
+        difficulty: "Media-Alta // Posicionamiento y combate rúnico",
+        lore: "Años después de cobrar su sangrienta venganza contra el Olimpo, Kratos vive exiliado en el reino nórdico de Midgard intentando enterrar su pasado y criar a su hijo Atreus mientras los dioses de Asgard vigilan sus pasos.<br><br>" +
+              "<strong>[ ARCHIVO 01: EL EXILIO A MIDGARD Y EL PACTO DE FAYE ]</strong><br>" +
+              "Tras devastar Grecia y liberarse de la manipulación divina, <strong>Kratos</strong> cruzó continentes hasta ocultarse en las tierras heladas de Escandinavia. Allí conoció a <strong>Laufey (Faye)</strong>, una mujer mortal con quien engendró a su hijo <strong>Atreus</strong>.<br><br>" +
+              "La travesía comienza con el funeral de Faye, cuya última voluntad exige que sus cenizas sean esparcidas desde el pico más alto de los Nueve Reinos. Para proteger a su hijo de la maldición de la divinidad, Kratos le ha ocultado a Atreus su verdadera naturaleza espartana, mientras porta el regalo póstumo de su esposa: el <mark>Hacha Leviatán</mark>, forjada por los herreros enanos Brok y Sindri para igualar el poder destructivo del Mjölnir de Thor.<br><br>" +
+              "<strong>[ ARCHIVO 02: LA AMENAZA AESIR Y LA BENDICIÓN MALDITA DE BALDUR ]</strong><br>" +
+              "La paz del retiro se fractura de inmediato cuando un misterioso guerrero inmune al dolor, <strong>Baldur</strong>, irrumpe en su cabaña bajo órdenes directas de Odín. Maldito por su madre, la diosa Vanir <strong>Freya</strong>, con un hechizo que lo hace incapaz de sentir daño físico, placer o frío para protegerlo de profecías de muerte, Baldur busca a Faye confundiéndola con la última gigante viva de Midgard.<br><br>" +
+              "El viaje hacia la montaña obliga a padre e hijo a cruzar reinos a través del <em>Templo de Týr</em>, guiados por la cabeza parlante del sabio decapitado <mark>Mímir</mark> y enfrentándose a la hostilidad de los elfos oscuros de Alfheim y los horrores de Helheim.<br><br>" +
+              "<strong>[ ARCHIVO 03: EL RETORNO DE LAS CENIZAS Y EL DESTINO DE JÖTUNHEIM ]</strong><br>" +
+              "Cuando la enfermedad de Atreus empeora debido a la lucha interna entre su condición divina y su ignorancia, Kratos se ve obligado a desenterrar las <mark>Espadas del Caos</mark>, aceptando el monstruo que solía ser para descender al infierno helado de Helheim en busca del corazón de un guardián.<br><br>" +
+              "Tras romper la invulnerabilidad de Baldur utilizando una flecha de muérdago y verse forzado a matarlo para salvar a Freya, Kratos y Atreus finalmente alcanzan el pico sagrado de <strong>Jötunheim</strong>. Allí descubren los murales ancestrales que revelan la verdad: Faye era la guardiana de los Gigantes, el verdadero nombre que ella le otorgó a Atreus es <mark>Loki</mark>, y su viaje entero estaba profetizado como el catalizador del fin del mundo: el <em>Ragnarök</em>.",
+        tips: "Domina el retorno del <mark>Hacha Leviatán</mark> para golpear a los enemigos por la espalda y congelarlos mientras alternas combate desarmado con el escudo para saturar su barra de aturdimiento.",
+        campaignTime: "20 - 25 HORAS",
+        platinumTime: "45 - 55 HORAS",
+        metaBuild: "Coraza de Niebla Mortal de Ivaldi + Talismán de los Reinos (Parada Temporal)",
+        engine: "SANTA MONICA STUDIO ENGINE",
+        arsenal: "El <mark>Hacha Leviatán</mark> domina el daño por hielo y control singular; las <strong>Espadas del Caos</strong> barren hordas con daño ígneo; el <strong>Escudo de Guardián</strong> ejecuta parries de precisión que desarman al rival.",
+        threats: "Las 8 Valquirias corruptas y su soberana final, <mark>Sigrún la Reina Valquiria</mark>, poseen el repertorio de ataques más rápido e implacable del juego, exigiendo memorización milimétrica de animaciones."
+    },
+
+    mortal_kombat_1: {
+        title: "MORTAL KOMBAT 1",
+        badge: "EXPEDIENTE #012 // NETHERREALM",
+        cardImage: "IMG/card-mk1.webp",
+        image: "IMG/banner-mk1.webp",
+        platforms: "PC | PLAYSTATION 5 | XBOX SERIES | NINTENDO SWITCH",
+        keywords: "mortal kombat 1 mk1 liu kang sub zero scorpion shang tsung raiden invasion kameo fatalities torneo netherrealm",
+        difficulty: "Media-Alta // Ejecución técnica y timing de asistencias",
+        lore: "Una nueva era esculpida en paz colapsa ante la ambición atemporal. El Dios del Fuego Liu Kang reinicia el universo solo para descubrir que el destino de la violencia no puede ser borrado, solo postergado.<br><br>" +
+              "<strong>[ ARCHIVO 01: EL NUEVO TIEMPO Y EL RELOJ DE ARENA ]</strong><br>" +
+              "Tras reclamar el poder del Reloj de Arena de Kronika, <strong>Liu Kang</strong> ascendió a <strong>Dios del Fuego</strong> y arquitecto del universo. Con el objetivo de erradicar los ciclos de odio interminables entre los reinos, moldeó una nueva línea temporal donde despojó de poder a los antiguos tiranos: convirtió a <strong>Shang Tsung</strong> y a <strong>Quan Chi</strong> en impostores itinerantes sin magia y reconfiguró el clan <em>Shirai Ryu</em> uniendo a <strong>Bi-Han (Sub-Zero)</strong> y a su hermano <strong>Kuai Liang (Scorpion)</strong> bajo el mando de los Lin Kuei para proteger Earthrealm.<br><br>" +
+              "En este nuevo orden, el conflicto con el <strong>Outworld</strong> se canaliza a través de un torneo ceremonial pacífico disputado entre campeones elegidos, donde un humilde granjero mortal llamado <strong>Raiden</strong> se corona como el defensor del reino de la Tierra bajo la tutela de Liu Kang.<br><br>" +
+              "<strong>[ ARCHIVO 02: LA INTERFERENCIA DEL TITÁN Y EL RETORNO DE LA HECHICERÍA ]</strong><br>" +
+              "La utopía comienza a fracturarse cuando una entidad enigmática conocida como <em>Damashi</em> contacta a Shang Tsung, dotándolo de conocimientos prohibidos para infectar a la emperatriz <strong>Sindel</strong> y sus hijas <strong>Mileena</strong> (afectada por la enfermedad biológica del <em>Tarkat</em>) y <strong>Kitana</strong>.<br><br>" +
+              "A medida que los Lin Kuei traicionan a Earthrealm seducidos por la promesa de mayor poder tecnológico y místico, Liu Kang descubre una verdad aterradora: la batalla en el fin del tiempo contra Kronika no generó una sola realidad, sino que fracturó el tejido del espacio-tiempo, y el misterioso patrocinador de la rebelión es nada menos que el <mark>Titán Shang Tsung</mark>, proveniente de una línea temporal paralela donde él resultó vencedor absoluto.<br><br>" +
+              "<strong>[ ARCHIVO 03: EL CHOQUE MULTIVERSAL Y LA PIRÁMIDE DEL CAOS ]</strong><br>" +
+              "Con ambas líneas temporales colisionando, el conflicto escala a una guerra dimensional masiva. El Titán Shang Tsung recluta variantes híbridas corrompidas a través del multiverso para destruir el Reloj de Arena de Liu Kang y devorar todas las realidades existentes.<br><br>" +
+              "Para frenar la aniquilación definitiva, Liu Kang renuncia temporalmente a su neutralidad divina, recluta a titanes alternativos y lidera una marcha desesperada ascendiendo la <strong>Pirámide de Argus</strong> en un combate multiversal brutal que sella el destino del nuevo canon de Mortal Kombat.",
+        tips: "Domina el sistema de <mark>Kameo Fighters</mark>. Utilizar las asistencias tanto para extender cadenas de combos aéreos como para cancelar animaciones inseguras en bloqueo es la diferencia entre un novato y un jugador de torneo.",
+        campaignTime: "6 - 8 HORAS",
+        platinumTime: "40 - 50 HORAS (Subir de nivel en Invasiones)",
+        metaBuild: "Johnny Cage / Kenshi + Asistencia Kameo de Sareena / Kano",
+        engine: "UNREAL ENGINE 4 (CUSTOM NETHERREALM BRANCH)",
+        arsenal: "El medidor EX para ataques amplificados combinados con el sistema de breakers defensivos y los viscerales <mark>Fatal Blows</mark> ejecutables al caer por debajo del 30% de salud.",
+        threats: "El <strong>Titán Shang Tsung</strong> y las variantes amalgama de la recta final castigan severamente los errores de bloqueo; en el modo Invasiones, los modificadores ambientales de superarmadura y proyectiles sónicos exigirán talismanes optimizados."
+    },
         };

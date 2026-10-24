@@ -165,7 +165,7 @@ if (cartasVisibles === 0) {
     });
 
     // 4. DELEGACIÓN DE EVENTOS: BOTÓN DE FAVORITO
-    gridContainer.addEventListener('click', (e) => {
+   gridContainer.addEventListener('click', (e) => {
         const favBtn = e.target.closest('.btn-fav');
         if (!favBtn) return;
 
@@ -174,17 +174,38 @@ if (cartasVisibles === 0) {
 
         const gameId = favBtn.getAttribute('data-id');
         const isNowFav = toggleFavoriteGame(gameId);
+        
+        // 1. OBTENER INFORMACIÓN DEL JUEGO DESDE LA BASE DE DATOS
+        const gameData = codexDatabase[gameId];
+        const gameTitle = gameData ? gameData.title : 'EXPEDIENTE';
 
         // Actualización de estado y contador reactivo en el clic
         favBtn.classList.toggle('active', isNowFav);
         favBtn.setAttribute('title', isNowFav ? 'Retirar de favoritos' : 'Fijar en favoritos');
         updateFavoritesCounter();
 
+        // 2. DISPARO DE SONIDO Y NOTIFICACIÓN TÁCTICA HUD
         if (isNowFav) {
             playTechSound(950, 'sine', 0.1, 0.05);
             setTimeout(() => playTechSound(1400, 'sine', 0.12, 0.05), 60);
+
+            if (typeof HUDToast !== 'undefined') {
+                HUDToast.show({
+                    title: gameTitle,
+                    message: "[ EXPEDIENTE VINCULADO AL CODEX ]",
+                    type: "sync"
+                });
+            }
         } else {
             playTechSound(420, 'sawtooth', 0.15, 0.04);
+
+            if (typeof HUDToast !== 'undefined') {
+                HUDToast.show({
+                    title: gameTitle,
+                    message: "[ EXPEDIENTE DESVINCULADO ]",
+                    type: "remove"
+                });
+            }
         }
 
         // Si estamos viendo solo favoritos y retiramos uno, ocultar la tarjeta en vivo
@@ -285,3 +306,4 @@ if (cartasVisibles === 0) {
     });
 
 });
+

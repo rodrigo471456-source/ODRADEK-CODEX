@@ -62,13 +62,28 @@ document.addEventListener('DOMContentLoaded', () => {
             updateFavButtonUI(isNowFav);
 
             if (isNowFav) {
+                // Audio feedback
                 playTechSound(950, 'sine', 0.1, 0.05);
                 setTimeout(() => playTechSound(1400, 'sine', 0.12, 0.05), 60);
+
+                // HUD TOAST: Notificación táctica de sincronización
+                HUDToast.show({
+                    title: selectedGame.title,
+                    message: "[ SINCRONIZACIÓN EXITOSA EN MEMORIA LOCAL ]",
+                    type: "sync"
+                });
             } else {
+                // Audio feedback
                 playTechSound(420, 'sawtooth', 0.15, 0.04);
+
+                // HUD TOAST: Notificación táctica de purga
+                HUDToast.show({
+                    title: selectedGame.title,
+                    message: "[ EXPEDIENTE PURGADO DE LA MEMORIA RÁPIDA ]",
+                    type: "remove"
+                });
             }
         });
-
     } else {
         // Estado 404: Expediente no localizado
         gameTitle.textContent = "ERROR 404 // REGISTRO NO ENCONTRADO";

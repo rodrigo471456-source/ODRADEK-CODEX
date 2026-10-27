@@ -1,6 +1,7 @@
         const codexDatabase = {
             deathstranding: {
                 title: "DEATH STRANDING: DIRECTORS CUT",
+                recommended: true,
                 badge:"EXPEDIENTE #001 // KOJIMA PRODUCTIONS",
                 image: "IMG/banner-deathstranding.webp",
                 cardImage: "IMG/card-deathstranding.webp",
@@ -100,6 +101,7 @@
             },
             cyberpunk: {
                 title: "CYBERPUNK 2077: PHANTOM LIBERTY",
+                recommended: true,
                 badge: "EXPEDIENTE #003 // CD PROJEKT RED",
                 image: "IMG/banner-cyberpunk.webp",
                 cardImage: "IMG/card-cyberpunk.webp",
@@ -152,6 +154,7 @@
             ,
     hollowknight: {
         title: "HOLLOW KNIGHT",
+        recommended: true,
         badge: "EXPEDIENTE #004 // TEAM CHERRY",
         cardImage: "IMG/card-hollowknight.webp",
         image: "IMG/banner-hollowknight.webp",
@@ -346,6 +349,7 @@ ghost_of_tsushima: {
     },
     gow_ragnarok: {
         title: "God of War Ragnarök",
+        recommended: true,
         badge: "EXPEDIENTE #008 // SANTA MONICA",
         platforms: "PC | PlayStation 5",
         cardImage: "IMG/card-gowragnarok.webp",
@@ -393,6 +397,7 @@ ghost_of_tsushima: {
     },
     tlou_part_2: {
         title: "The Last of Us Part II",
+        recommended: true,
         badge: "EXPEDIENTE #009 // NAUGHTY DOG",
         platforms: "PlayStation 5",
         cardImage: "IMG/card-tlou2.webp",
@@ -442,6 +447,7 @@ ghost_of_tsushima: {
     },
     detroit_become_human: {
         title: "DETROIT: BECOME HUMAN",
+        recommended: true,
         badge: "EXPEDIENTE #010 // QUANTIC DREAM",
         cardImage: "IMG/card-detroit.webp",
         image: "IMG/banner-detroit.webp",
@@ -468,6 +474,7 @@ ghost_of_tsushima: {
 
     gow_2018: {
         title: "GOD OF WAR (2018)",
+        recommended: true,
         badge: "EXPEDIENTE #011 // SANTA MONICA",
         cardImage: "IMG/card-gow2018.webp",
         image: "IMG/banner-gow2018.webp",
@@ -516,6 +523,7 @@ ghost_of_tsushima: {
 
     mortal_kombat_1: {
         title: "MORTAL KOMBAT 1",
+        recommended: true,
         badge: "EXPEDIENTE #012 // NETHERREALM",
         cardImage: "IMG/card-mk1.webp",
         image: "IMG/banner-mk1.webp",
@@ -561,6 +569,7 @@ ghost_of_tsushima: {
     },
     spiderman_2: {
         title: "MARVEL'S SPIDER-MAN 2",
+        recommended: true,
         badge: "EXPEDIENTE #013 // INSOMNIAC GAMES",
         cardImage: "IMG/card-spiderman2.webp",
         image: "IMG/banner-spiderman2.webp",
@@ -595,6 +604,7 @@ ghost_of_tsushima: {
 
     marvel_rivals: {
         title: "MARVEL RIVALS",
+        recommended: true,
         badge: "EXPEDIENTE #014 // NETEASE GAMES",
         cardImage: "IMG/card-marvelrivals.webp",
         image: "IMG/banner-marvelrivals.webp",
@@ -641,6 +651,7 @@ ghost_of_tsushima: {
 
     jurassic_world_evo_2: {
         title: "JURASSIC WORLD EVOLUTION 2",
+        recommended: true,
         badge: "EXPEDIENTE #015 // FRONTIER DEVELOPMENTS",
         cardImage: "IMG/card-jwe2.webp",
         image: "IMG/banner-jwe2.webp",
@@ -749,6 +760,7 @@ ghost_of_tsushima: {
     },
     bloodborne: {
         title: "BLOODBORNE",
+        recommended: true,
         badge: "EXPEDIENTE #018 // FROM SOFTWARE",
         cardImage: "IMG/card-bloodborne.webp",
         image: "IMG/banner-bloodborne.webp",

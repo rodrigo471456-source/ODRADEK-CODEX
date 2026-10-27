@@ -26,15 +26,31 @@ document.addEventListener('DOMContentLoaded', () => {
         countSpan.textContent = `[ ${totalFavs} ]`;
     }
 
-    // 2. RENDERIZADO INICIAL DEL CATÁLOGO
-    function renderCatalog() {
+function renderCatalog() {
         let cardsHTML = '';
         const currentFavorites = getStoredFavorites();
 
         for (const key in codexDatabase) {
             const game = codexDatabase[key];
             const isFav = currentFavorites.includes(key);
+            const isRecommended = !!game.recommended;
 
+            // Insignia del Mapache Táctico (solo si está recomendado)
+            const mapacheBadgeHTML = isRecommended ? `
+                <div class="badge-recommended" data-tooltip="[ APROBADO POR RODU // VERIFICADO ]" aria-label="Recomendado por Rodu">
+                    <svg viewBox="0 0 24 24">
+                        <polygon points="4,3 8,9 3,8" />
+                        <polygon points="20,3 21,8 16,9" />
+                        <polygon points="5,8 19,8 22,14 18,20 12,22 6,20 2,14" />
+                        <path d="M 6,11 Q 9,13 12,12 Q 15,13 18,11 L 19,14 Q 15,16 12,14 Q 9,16 5,14 Z" fill="#0a0a0a" />
+                        <circle cx="8.5" cy="12.5" r="1" fill="#00ff88" />
+                        <circle cx="15.5" cy="12.5" r="1" fill="#00ff88" />
+                        <polygon points="11,17 13,17 12,18.5" fill="#00ff88" />
+                    </svg>
+                </div>
+            ` : '';
+
+            // Generación de etiquetas de plataformas
             const tagsHTML = game.platforms.split('|').map(plat => {
                 const p = plat.trim();
                 const pLower = p.toLowerCase();
@@ -52,11 +68,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 return `<span class="${tagClass}">${label}</span>`;
             }).join('');
 
+            // Molde ÚNICO: incluye el atributo data-recommended, el mapache y todo el contenido
             cardsHTML += `
-            <article class="game-card" style="display: flex;" data-id="${key}" data-keywords="${game.keywords || ''}">
+            <article class="game-card" style="display: flex;" data-id="${key}" data-keywords="${game.keywords || ''}" data-recommended="${isRecommended}">
                 <div class="card-image">
                     <img src="${game.cardImage}" alt="${game.title}" width="300" loading="lazy">
                     <span class="game-badge">${game.badge.split('//')[0].trim()}</span>
+
+                    ${mapacheBadgeHTML}
 
                     <button class="btn-fav ${isFav ? 'active' : ''}" data-id="${key}" title="${isFav ? 'Retirar de favoritos' : 'Fijar en favoritos'}" aria-label="Favorito">
                         <svg viewBox="0 0 24 24">
@@ -84,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
     renderCatalog();
     updateFavoritesCounter();
 
-    // 3. FILTRADO CENTRAL (BUSCADOR + CATEGORÍAS)
+// 3. FILTRADO CENTRAL (BUSCADOR + CATEGORÍAS)
     const gameCards = document.querySelectorAll('.game-card');
 
     function filterGames() {
@@ -111,11 +130,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const matchesSearch = title.includes(query) || platforms.includes(query) || keywords.includes(query);
 
+            // Evaluación de categoría (dentro del bucle donde sí existen card y cardId)
             let matchesCategory = false;
             if (selectedPlatform === 'all') {
                 matchesCategory = true;
             } else if (selectedPlatform === 'favorites') {
                 matchesCategory = favoritesList.includes(cardId);
+            } else if (selectedPlatform === 'recommended') {
+                matchesCategory = card.getAttribute('data-recommended') === 'true';
             } else {
                 matchesCategory = platforms.includes(selectedPlatform);
             }
@@ -128,19 +150,20 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-if (cartasVisibles === 0) {
-    if (selectedPlatform === 'favorites' && query === '') {
-        noFavoritesMsg.style.display = 'block';
-        noResultsMsg.style.display = 'none';
-    } else {
-        noResultsMsg.style.display = 'block';
-        noFavoritesMsg.style.display = 'none';
-        playTechSound(220, 'sawtooth', 0.2, 0.04);
-    }
-} else {
-    noResultsMsg.style.display = 'none';
-    noFavoritesMsg.style.display = 'none';
-}
+        // Manejo de pantallas de alerta
+        if (cartasVisibles === 0) {
+            if (selectedPlatform === 'favorites' && query === '') {
+                noFavoritesMsg.style.display = 'block';
+                noResultsMsg.style.display = 'none';
+            } else {
+                noResultsMsg.style.display = 'block';
+                noFavoritesMsg.style.display = 'none';
+                playTechSound(220, 'sawtooth', 0.2, 0.04);
+            }
+        } else {
+            noResultsMsg.style.display = 'none';
+            noFavoritesMsg.style.display = 'none';
+        }
     }
 
     // Eventos de Búsqueda

@@ -14,6 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const btnCatalogo = document.getElementById('btn-catalogo');
     const seccionCatalogo = document.getElementById('catalogo');
     const btnSugerencias = document.getElementById('btn-sugerencias');
+    const searchConsole = document.querySelector('.search-console');
+    let debounceTimer = null; // <-- CRONÓMETRO TÁCTICO
 
     // Función para actualizar la cifra numérica en el HUD de favoritos
     function updateFavoritesCounter() {
@@ -142,15 +144,24 @@ if (cartasVisibles === 0) {
     }
 
     // Eventos de Búsqueda
-    searchInput.addEventListener('input', filterGames);
+searchInput.addEventListener('input', () => {
+        // 1. Encendemos el HUD de escaneo en la barra de inmediato
+        if (searchConsole) {
+            searchConsole.classList.add('is-scanning');
+        }
 
-    btnScan.addEventListener('click', (e) => {
-        e.preventDefault();
-        screenScanner.classList.add('scanning');
-        setTimeout(() => screenScanner.classList.remove('scanning'), 200);
-        playTechSound(400, 'square', 0.1, 0.05);
-        setTimeout(() => playTechSound(800, 'square', 0.15, 0.05), 100);
-        filterGames();
+        // 2. Si el usuario sigue tecleando, reiniciamos la cuenta regresiva
+        clearTimeout(debounceTimer);
+
+        // 3. Esperamos 300ms de calma para disparar la búsqueda real
+        debounceTimer = setTimeout(() => {
+            filterGames();
+
+            // 4. Apagamos la animación cuando la búsqueda termina
+            if (searchConsole) {
+                searchConsole.classList.remove('is-scanning');
+            }
+        }, 300);
     });
 
     // Eventos de Filtro de Plataforma
@@ -307,3 +318,24 @@ if (cartasVisibles === 0) {
 
 });
 
+// Listener global de Hotkeys para index.html
+document.addEventListener('keydown', (e) => {
+    const searchInput = document.querySelector('.search-input');
+    if (!searchInput) return;
+
+    if (e.key === '/' && document.activeElement !== searchInput){
+        e.preventDefault();
+        searchInput.focus();
+        searchInput.select();
+    }
+if (e.key === 'Escape') {
+    if (searchInput.value !=='') {
+        searchInput.value = '';
+        
+// Disparar evento input para actualizar la vista del catálogo
+
+        searchInput.dispatchEvent(new Event('input'));
+            searchInput.blur();
+        }
+    }
+});

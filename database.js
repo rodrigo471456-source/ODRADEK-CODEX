@@ -681,5 +681,206 @@ ghost_of_tsushima: {
         • <strong>Tornados y Tormentas Tropicales:</strong> Desconectan la red eléctrica principal y derriban vallas de contención simultáneamente.<br>
         • <strong>Brotes de Gripe Aviar / Rabia:</strong> Epidemias que se propagan rápidamente por aire o agua si los equipos veterinarios no vacunan a los especímenes infectados a tiempo.<br>
         • <strong>Manadas de Velociraptores:</strong> Cazan en grupo y prueban sistemáticamente los puntos débiles de las cercas para provocar escapes masivos.`
+    },
+    nier_automata: {
+        title: "NIER: AUTOMATA",
+        badge: "EXPEDIENTE #016 // SQUARE ENIX / PLATINUM",
+        cardImage: "IMG/card-nier.webp",
+        image: "IMG/banner-nier.webp",
+        platforms: "PC | PLAYSTATION 5 | XBOX SERIES",
+        keywords: "nier automata 2b 9s yorha platinumgames hack and slash postapocaliptico androide",
+        difficulty: "Media-Alta // Combates frenéticos y balas danzantes",
+        lore: "La Tierra ha sido abandonada tras una invasión alienígena y sus formas de vida mecánicas. La resistencia androide YorHa desplaza a unidades de combate para recuperar el planeta.<br><br>" +
+              "<strong>[ ARCHIVO 01: EL FALSO MITO DEL CONSEJO HUMANO ]</strong><br>" +
+              "Las unidades de combate avanzado YoRHa (como <strong>2B</strong> y el escáner <strong>9S</strong>) operan bajo la premisa de que la humanidad sobrevivió a la invasión refugiándose en la Luna. Sin embargo, tras desclasificar los archivos negros del búnker, se revela una verdad devastadora: el Consejo de la Humanidad se extinguio siglos atrás, y las transmisiones lunares son un bucle automatizado diseñado para sostener la moral de los androides en su guerra sin fin.<br><br>" +
+              "<strong>[ ARCHIVO 02: LA EVOLUCIÓN DE LA RED MÁQUINA ]</strong><br>" +
+              "Las formas de vida mecánicas creadas por los alienígenas originales desarrollaron una red consciente que evolucionó imitando el comportamiento humano. Lejos de ser meros autómatas descerebrados, las máquinas formaron civilizaciones, religiones pacifistas, reinos feudales y sectas autodestructivas en su incesante búsqueda por comprender el propósito de la existencia, el dolor y la muerte.<br><br>" +
+              "<strong>[ ARCHIVO 03: EL CICLO DE REINICIO Y LA PARADOJA EXISTENCIAL ]</strong><br>" +
+              "El conflicto culmina cuando la Red de Máquinas colapsa y desata el virus lógico que corrompe a todo el sistema YoRHa. A través de múltiples finales que entrelazan las perspectivas de 2B, 9S y la androide renegada A2, la narrativa expone cómo el ciclo constante de destrucción y renacimiento refleja la misma búsqueda de sentido tanto en máquinas como en androides, abriendo la puerta a una reconstrucción consciente.",
+        tips: "Personaliza tus <mark>Chips OS</mark> con cascos de recuperación automática de VIT y contraataque de choque. No remuevas el chip central del sistema operativo o <strong>2B sufrirá un apagón instantáneo</strong>.",
+        campaignTime: "20 - 25 HORAS",
+        platinumTime: "45 - 55 HORAS (Múltiples finales A-E)",
+        engine: "PLATINUMGAMES ENGINE",
+        metaBuild: "Pod Láser + Espada Doble | Chip Crítico Avanzado | Absorción de Daño Absoluto",
+        arsenal: `<strong>[ VARIANTE 01 // COMBATE HÍBRIDO BLANCO-POD ]</strong><br>
+        • <strong>Armamento Principal:</strong> Espada Virtuosa (alta velocidad de corte) + Lanza Cruel (daño pesado perforante).<br>
+        • <strong>Pod de Apoyo:</strong> Pod 042 con láser focalizado continuo.<br>
+        • <strong>Directiva Táctica:</strong> Alterna evasión perfecta con disparos constantes del Pod para mantener la presión sobre escudos enemigos.<br><br>
+        <strong>[ VARIANTE 02 // PROTOCOLO DE CHOQUE CRÍTICO ]</strong><br>
+        • <strong>Chips Clave:</strong> Crítico + Rango de Ataque + Recuperación de VIT por impacto.<br>
+        • <strong>Directiva Táctica:</strong> Acumula bonificadores de daño en ráfagas cuerpo a cuerpo tras ejecutar un esquive milimétrico.`,
+        threats: `<strong>[ CLASIFICACIÓN ALFA // ENTIDADES DE RED Y GOLIATHS ]</strong><br>
+        • <mark>Goliath Bipedal de Fábrica:</mark> Unidades colosales con escudos de energía térmica y morteros de área.<br>
+        • <mark>Adam y Eva:</mark> Entidades humanoides evolucionadas capaces de manipular la red quiral y generar campos de fuerza impenetrables.<br><br>
+        <strong>[ CLASIFICACIÓN BETA // PATRULLAS DE RUINAS ]</strong><br>
+        • <strong>Unidades Bipodas y Cuadrúpedas de Asalto:</strong> Máquinas estándar que patrullan en enjambres coordinados.`
+    },
+    armored_core_vi: {
+        title: "ARMORED CORE VI: FIRES OF RUBICON",
+        badge: "EXPEDIENTE #017 // FROM SOFTWARE",
+        cardImage: "IMG/card-ac6.webp",
+        image: "IMG/banner-ac6.webp",
+        platforms: "PC | PLAYSTATION 5 | XBOX SERIES",
+        keywords: "armored core vi fromsoftware rubicon mecha c4-621 coral action mechs",
+        difficulty: "Alta // Gestión de energía y postura ACS",
+        lore: "En el planeta remoto Rubicon 3, una nueva fuente de energía misteriosa llamada Coral provocó una catástrofe cósmica. Las corporaciones y mercenarios compiten por su control absoluto.<br><br>" +
+              "<strong>[ ARCHIVO 01: EL CATACLISMO DE LOS FUEGOS DE IBIS ]</strong><br>" +
+              "El <mark>Coral</mark> es una sustancia energética sub-cinética con propiedades extraordinarias capaz de impulsar el avance tecnológico masivo en la galaxia. Sin embargo, su manipulación descontrolada desató una catástrofe planetaria conocida como <em>Los Fuegos de Ibis</em>, incinerando por completo el sistema estelar de Rubicon 3 y reduciendo su superficie a un yermo industrial plagado de tormentas de fuego.<br><br>" +
+              "<strong>[ ARCHIVO 02: EL MERCENARIO C4-621 (RAVEN) ]</strong><br>" +
+              "Medio siglo después, el Coral ha vuelto a manifestarse bajo la superficie del planeta. Las megacorporaciones interestelares (Balam y Arquebus) y el Frente de Liberación de Rubicon entablan una guerra sin cuartel. Tú operas como el mercenario humano aumentado quirúrgicamente <mark>C4-621</mark>, quien bajo el alias robado de <strong>'Raven'</strong> acepta contratos clandestinos asignados por el manipulador Handler Walter.<br><br>" +
+              "<strong>[ ARCHIVO 03: MUTACIÓN CÓSMICA Y DECISIÓN FINAL ]</strong><br>" +
+              "A medida que te adentras en las profundidades de Rubicon, descubres que el Coral no es solo combustible, sino una forma de vida simbiótica con consciencia propia. En el conflicto definitivo, tus decisiones determinarán si liberas el Coral hacia las estrellas (iniciando una simbiosis universal) o si ejecutas las órdenes de contención total incinerando el planeta por segunda vez.",
+        tips: "Controla estrictamente la temperatura de tus armas pesadas. El <mark>Stagger (Aturdimiento ACS)</mark> define la victoria: rompe la postura del enemigo con misiles cinéticos antes de descargar tus armas de plasma.",
+        campaignTime: "30 - 35 HORAS",
+        platinumTime: "60 - 70 HORAS",
+        engine: "FROMSOFTWARE PROPRIETARY",
+        metaBuild: "Cuadrúpedo Misilero de Alta Elevación | Bípede de Asalto con Espada Láser y Escopeta Pesada",
+        arsenal: `<strong>[ VARIANTE 01 // BÍPEDO DE RUSH Y QUIEBRA DE POSTURA ]</strong><br>
+        • <strong>Armamento:</strong> Escopeta pesada SG-027 Zimmerman + Espada de Pulso Stun Baton + Lanzamisiles cuádruples de hombro.<br>
+        • <strong>Directiva Táctica:</strong> Cierra distancia mediante impulso de asalto (Assault Boost), descarga la escopeta para quebrar el ACS y remata con la espada de pulso.<br><br>
+        <strong>[ VARIANTE 02 // TANQUE ARTILLERO DE LARGO ALCANCE ]</strong><br>
+        • <strong>Chasis:</strong> Oruga de Tanque pesada + Doble cañón láser de alta potencia.<br>
+        • <strong>Directiva Táctica:</strong> Bombardeo masivo desde posiciones elevadas sin perder estabilidad de disparo.`,
+        threats: `<strong>[ CLASIFICACIÓN ALFA // ARMAS AUTÓNOMAS DE ÉLITE ]</strong><br>
+        • <mark>BALTEUS:</mark> Sistema de asalto acorazado con escudos de pulso térmico y andanadas masivas de misiles guiados.<br>
+        • <mark>IB-01: CEL 240:</mark> Máquina autónoma reliquia de Ibis con velocidad hipersónica y haces de energía láser orbital.<br><br>
+        <strong>[ CLASIFICACIÓN BETA // MTs CORPORATIVOS ]</strong><br>
+        • <strong>Mechas Tácticos de Balam y Arquebus:</strong> Infantería mecanizada con cañones rotatorios y escudos frontales de energía.`
+    },
+    bloodborne: {
+        title: "BLOODBORNE",
+        badge: "EXPEDIENTE #018 // FROM SOFTWARE",
+        cardImage: "IMG/card-bloodborne.webp",
+        image: "IMG/banner-bloodborne.webp",
+        platforms: "PLAYSTATION 5 | PLAYSTATION 4",
+        keywords: "bloodborne fromsoftware soulsborne yharnam ps5 cazador kos eldritch",
+        difficulty: "Muy Alta // Combate agresivo y reflejos de parry",
+        lore: "Atrapado en la maldita ciudad de Yharnam durante una noche de cacería, el Cazador debe desentrañar los secretos de la sangre vieja y los Grandes Insondables.<br><br>" +
+              "<strong>[ ARCHIVO 01: EL DESCUBRIMIENTO DE LA SANGRE VIEJA ]</strong><br>" +
+              "La otrora majestuosa ciudad de <mark>Yharnam</mark> prosperó gracias a los descubrimientos médicos de la Iglesia de la Sanación en las ruinas subterráneas del Laberinto de los Pthumerios, donde extrajeron la sagrada <em>Sangre Vieja</em> de los seres cósmicos conocidos como los <strong>Grandes (Great Ones)</strong>. Esta sangre curaba cualquier enfermedad, pero su uso desmedido desató la maldición de la Puga de la Bestia.<br><br>" +
+              "<strong>[ ARCHIVO 02: LA PLAGA DE LA BESTIA Y EL SUEÑO DEL CAZADOR ]</strong><br>" +
+              "Durante las noches de cacería roja, la luna menguante desciende y los ciudadanos se transforman en horribles bestias sedientas de sangre. Para contener el brote, los cazadores emplean armas de truco y pistolas de chispa. Atrapado en este ciclo, tu personaje firma un contrato con el <mark>Sueño del Cazador</mark>, un refugio extracorpóreo vinculado a la Presencia de la Luna que te resucita tras cada muerte.<br><br>" +
+              "<strong>[ ARCHIVO 03: EL CÓsmico AMANECER ]</strong><br>" +
+              "A medida que la cacería avanza hacia las horas de la madrugada, la amenaza deja atrás a las bestias terrenales y expone horrores cósmicos de pesadilla. Para romper el ciclo, deberás descender a los laboratorios secretos de Byrgenwerth, cazar a los Grandes Insondables y decidir si te conviertes en el nuevo custodio del Sueño o despiertas bajo el alba de un nuevo día.",
+        tips: "Aprovecha la mecánica de <mark>Regain (Recuperación)</mark>: si golpeas al enemigo inmediatamente después de recibir daño, recuperarás parte de tu salud perdida sin gastar viales de sangre.",
+        campaignTime: "30 - 35 HORAS",
+        platinumTime: "65 - 75 HORAS",
+        engine: "FROMSOFTWARE PROPRIETARY",
+        metaBuild: "Cuchilla de Enterrador + Pistola de Cazador | Hacha de Cazador a Dos Manos (Spin-to-Win)",
+        arsenal: `<strong>[ VARIANTE 01 // HOJA DE SANTO Y PISTOLA DE CAZADOR ]</strong><br>
+        • <strong>Arma Principal:</strong> Cuchilla Cerrada / Espada de Ludwig.<br>
+        • <strong>Arma de Fuego:</strong> Pistola de Cazador (para interrupción de ataques a distancia y ejecución de Visceral Attacks).<br>
+        • <strong>Directiva Táctica:</strong> Dispara la pistola en el fotograma exacto en que el jefe inicia su acometida para abrirlo a un golpe visceral crítico.<br><br>
+        <strong>[ VARIANTE 02 // HACHA GIGANTE DE CAMPAÑA ]</strong><br>
+        • <strong>Arma Principal:</strong> Hacha de Cazador (Modo Extendido de Guadaña).<br>
+        • <strong>Directiva Táctica:</strong> Usa el ataque cargado en círculo para barrer hordas completas de licántropos y mantenerlos fuera de rango.`,
+        threats: `<strong>[ CLASIFICACIÓN ALFA // GRANDES INSONDABLES Y CAZADORES RENIEGADOS ]</strong><br>
+        • <mark>Padre Gascoigne y Gehrman:</mark> Cazadores maestros con cadenas de combos letales y transformaciones en bestia.<br>
+        • <mark>Huérfano de Kos:</mark> Deidad infante nacida en la costa de la Pesadilla, dotada de agilidad sobrehumana y ataques de energía arcana.<br><br>
+        <strong>[ CLASIFICACIÓN BETA // JAURÍAS DE YHARNAM ]</strong><br>
+        • <strong>Aldeanos Infectados y Sabuesos de la Iglesia:</strong> Hostiles rápidos que emboscan en callejones oscuros con antorchas y cuchillas.`
+    },
+    sekiro: {
+        title: "SEKIRO: SHADOWS DIE TWICE",
+        badge: "EXPEDIENTE #019 // FROMSOFTWARE",
+        cardImage: "IMG/card-sekiro.webp",
+        image: "IMG/banner-sekiro.webp",
+        platforms: "PC | PLAYSTATION 5 | XBOX SERIES",
+        keywords: "sekiro fromsoftware souls lobo kuro katana shinobi parry postura ashina japon",
+        difficulty: "Extrema // Ritmo de desvío y postura implacable",
+        lore: "En el ocaso del periodo Sengoku, un shinobi de un solo brazo debe rescatar a su joven señor y romper la maldición de la inmortalidad que desangra la provincia de Ashina.<br><br>" +
+              "<strong>[ ARCHIVO 01: EL LINAJE DEL DRAGÓN Y EL CLAN ASHINA ]</strong><br>" +
+              "La tierra de Ashina se encuentra al borde de la conquista militar. Desesperado por salvar a su pueblo de las fuerzas del Ministerio Interior, el comandante <strong>Genichiro Ashina</strong> busca apoderarse del <em>Acervo del Dragón</em>: la sangre divina del joven amo <strong>Kuro</strong> que otorga la resurrección eterna a quien selle un pacto con él.<br><br>" +
+              "<strong>[ ARCHIVO 02: LA PRÓTESIS SHINOBI Y EL LOBO DE UN SOLO BRAZO ]</strong><br>" +
+              "Tras perder su brazo izquierdo protegiendo a Kuro, el shinobi <mark>Lobo (Sekiro)</mark> es rescatado por el Escultor en el Templo Desolado. Equipado con la <strong>Prótesis de Shinobi</strong> —un artefacto mecánico que alberga desde shurikens y hachas de resorte hasta lanzallamas y cuervos de niebla—, Sekiro emprende una cacería implacable por tejados nevados y valles de bambú.<br><br>" +
+              "<strong>[ ARCHIVO 03: LA HOJA MORTAL Y LA RUPTURA DE LA INMORTALIDAD ]</strong><br>" +
+              "Kuro rechaza que los hombres mueran por su sangre y le encomienda a Lobo la misión de cortar el linaje inmortal. Para lograrlo, Sekiro debe reclamar la sagrada <mark>Hoja Mortal (Fushigiri)</mark> en el Templo Senpou, un arma maldita que mata a quien la desenfunda y la única capaz de aniquilar a los seres infectados por el <em>Ciempiés de la Inmortalidad</em>, culminando en un duelo a muerte contra su propio padre adoptivo, el Búho, y el mismísimo Santo de la Espada, Isshin Ashina.",
+        tips: "Olvida rodar por el suelo: la defensa en Sekiro es ataque. Domina el ritmo del <mark>Desvío Perfecto (Deflect)</mark> para llenar la barra de postura del enemigo y ejecutar un golpe mortal <strong>Shinobi Deathblow</strong>.",
+        campaignTime: "30 - 35 HORAS",
+        platinumTime: "60 - 70 HORAS",
+        engine: "FROMSOFTWARE PROPRIETARY",
+        metaBuild: "Prótesis de Hacha de Resorte + Cuervo de Niebla | Técnica Ichimonji Doble",
+        arsenal: `<strong>[ VARIANTE 01 // SHINOBI DE CHOQUE RÍTMICO ]</strong><br>
+        • <strong>Arma Principal:</strong> Katana Kusabimaru + Hoja Mortal (Ataques de sangre oscura que perforan guardia).<br>
+        • <strong>Arte de Combate:</strong> <em>Ichimonji Doble</em> (Recupera postura propia mientras castiga severamente la del rival).<br>
+        • <strong>Directiva Táctica:</strong> Mantén presión constante cara a cara; castiga estocadas con el <mark>Contraataque Mikiri</mark> pisando la lanza enemiga.<br><br>
+        <strong>[ VARIANTE 02 // INGENIO PROSTÉTICO Y CONTROL ESPACIAL ]</strong><br>
+        • <strong>Herramientas:</strong> Hacha Cargada (destruye escudos de madera) + Barreno Metálico (aturde bestias con chispas de pólvora).<br>
+        • <strong>Directiva Táctica:</strong> Alterna shurikens aéreos para frenar enemigos ágiles antes de que toquen el suelo.`,
+        threats: `<strong>[ CLASIFICACIÓN ALFA // LEYENDAS MARCIALES Y HORRORES INMORTALES ]</strong><br>
+        • <mark>Isshin, el Santo de la Espada:</mark> Maestro supremo de 3 fases que combina esgrima ancestral, lanza de guerra y una pistola de fuego continuo en campo abierto.<br>
+        • <mark>Simio Guardián:</mark> Bestia colosal que tras ser decapitada revive sosteniendo su propia cabeza y una espada gigante, emitiendo un grito de terror corrosivo.<br><br>
+        <strong>[ CLASIFICACIÓN BETA // TROPAS DEL MINISTERIO Y MONJES CORRUPTOS ]</strong><br>
+        • <strong>Monjes Guerreros de Senpou:</strong> Acróbatas aéreos con patadas de largo alcance e inmunidad parcial a retroceso.<br>
+        • <strong>Fusileros del Valle Sumergido:</strong> Tiradores de alta precisión que disparan balas de plomo pesado a través de la niebla.`
+    },
+    control: {
+        title: "CONTROL",
+        badge: "EXPEDIENTE #020 // REMEDY ENTERTAINMENT",
+        cardImage: "IMG/card-control.webp",
+        image: "IMG/banner-control.webp",
+        platforms: "PC | PLAYSTATION 5 | XBOX SERIES",
+        keywords: "control remedy jesse faden fbc la casa mas antigua telequinesis paranormal objetos de poder",
+        difficulty: "Media-Alta // Combate tridimensional y posicionamiento",
+        lore: "La Agencia Federal de Control ha sido invadida por una fuerza extradimensional corruptora. La nueva Directora debe dominar poderes paranormales para recuperar el cuartel general.<br><br>" +
+              "<strong>[ ARCHIVO 01: LA CASA MÁS ANTIGUA Y EL FBC ]</strong><br>" +
+              "En el corazón de Manhattan se alza la <mark>Casa Más Antigua (The Oldest House)</mark>, un rascacielos brutalista que opera como un <em>Lugar de Poder</em> secreto que no existe en los mapas convencionales. Allí, el FBC investiga los Eventos de Mundo Alterado (AWE) y confina los <strong>Objetos de Poder (OoP)</strong>: reliquias cotidianas vinculadas al plano astral.<br><br>" +
+              "<strong>[ ARCHIVO 02: LA INVASIÓN DEL HISS (EL CLIC) ]</strong><br>" +
+              "Una frecuencia de sonido hostil y extradimensional conocida como <mark>El Hiss (El Murmullo)</mark> penetra la instalación, corrompiendo a los agentes y distorsionando la arquitectura de concreto en geometrías flotantes imposibles. Cuando el antiguo Director Trench cae, el <em>Arma de Servicio</em> astral elige a una visitante externa, <strong>Jesse Faden</strong>, como la nueva Directora.<br><br>" +
+              "<strong>[ ARCHIVO 03: EL VIAJE DE JESSE Y POLARIS ]</strong><br>" +
+              "Acompañada por una entidad cósmica benevolente llamada <em>Polaris</em>, Jesse explora los sectores laberínticos de la agencia en busca de su hermano secuestrado, Dylan. Utilizando telequinesis masiva, levitación y reprogramación astral, Jesse debe sellar los focos de resonancia del Hiss antes de que la infección escape a la realidad exterior.",
+        tips: "Nunca te quedes quieto en el suelo. El secreto de Jesse es el <mark>vuelo y lanzamiento telequinético</mark>: arranca escombros del entorno con telequinesis mientras recargas el Arma de Servicio en el aire.",
+        campaignTime: "15 - 20 HORAS",
+        platinumTime: "30 - 35 HORAS",
+        engine: "NORTHLIGHT ENGINE",
+        metaBuild: "Lanzamiento Telequinético Nivel 5 + Escudo de Escombros | Arma de Servicio (Modo Perforador)",
+        arsenal: `<strong>[ VARIANTE 01 // DIRECTORA CINÉTICA - DEMOLICIÓN PARANORMAL ]</strong><br>
+        • <strong>Poder Principal:</strong> Lanzamiento Telequinético Multiobjetivo (arranca pedazos de concreto, extintores y cohetes al vuelo).<br>
+        • <strong>Arma de Servicio:</strong> Forma 'Grip' (Pistola de alta precisión) + Forma 'Shatter' (Escopeta de dispersión cinética).<br>
+        • <strong>Directiva Táctica:</strong> Lanza objetos pesados para reventar las barreras de energía del Hiss y remata con ráfagas balísticas.<br><br>
+        <strong>[ VARIANTE 02 // SUPREMACÍA AÉREA Y CONTROL MENTAL ]</strong><br>
+        • <strong>Poderes Clave:</strong> Levitación sostenida + Evasión aérea + Subyugación (Seize) de enemigos débiles.<br>
+        • <strong>Directiva Táctica:</strong> Domina el espacio vertical flotando sobre coberturas y reprograma a médicos del Hiss para que curen a Jesse en combate.`,
+        threats: `<strong>[ CLASIFICACIÓN ALFA // ANOMALÍAS ASTRALES Y AGENTES CORROMPIDOS ]</strong><br>
+        • <mark>El Ancla (The Anchor):</mark> Masa biológica rotatoria suspendida en el vacío que expulsa oleadas de escombros gigantescos a través de su núcleo expuesto.<br>
+        • <mark>Salvador Corrompido:</mark> Jefe de seguridad poseído por el Hiss con telequinesis pesada y escudos de rocas flotantes.<br><br>
+        <strong>[ CLASIFICACIÓN BETA // ENTIDADES DEL MURMULLO ]</strong><br>
+        • <strong>Agentes del Hiss Elevados:</strong> Hostiles voladores que esquivan proyectiles convencionales y arrojan proyectiles telequinéticos dobles.<br>
+        • <strong>Kamikazes de Resonancia:</strong> Espectros distorsionados que corren gritando para detonar ondas de choque suicidas a corta distancia.`
+    },
+    re4_remake: {
+        title: "RESIDENT EVIL 4 REMAKE",
+        badge: "EXPEDIENTE #021 // CAPCOM",
+        cardImage: "IMG/card-re4.webp",
+        image: "IMG/banner-re4.webp",
+        platforms: "PC | PLAYSTATION 5 | XBOX SERIES",
+        keywords: "resident evil 4 capcom leon kennedy ashley buhonero plagas motosierra parry cuchillo survival horror",
+        difficulty: "Alta // Gestión de recursos y combate visceral",
+        lore: "Seis años después del desastre biológico de Raccoon City, el agente Leon S. Kennedy es enviado a una remota región de España para rescatar a la hija secuestrada del presidente.<br><br>" +
+              "<strong>[ ARCHIVO 01: EL CULTO DE LOS ILUMINADOS Y LAS PLAGAS ]</strong><br>" +
+              "La investigación conduce a Leon hacia una villa rural aislada controlada por un culto fanático llamado <mark>Los Iluminados</mark>, liderado por Osmund Saddler. Los aldeanos no son zombis lentos, sino humanos infectados por un parásito ancestral conocido como <strong>Las Plagas</strong>, que suprime el dolor, conserva la habilidad de coordinar emboscadas con armas de fuego y herramientas, y responde ciegamente a una mente colmena.<br><br>" +
+              "<strong>[ ARCHIVO 02: LA MISIÓN DE EXTRACCIÓN Y ASHLEY GRAHAM ]</strong><br>" +
+              "Leon localiza a <strong>Ashley Graham</strong> encerrada en una iglesia protegida por el alcalde monstruoso Bitores Méndez. Sin embargo, ambos han sido inoculados con huevos de Plaga, iniciando una carrera contra el reloj para encontrar una cura médica antes de que los parásitos maduren en sus sistemas nerviosos y los transformen en marionetas del culto.<br><br>" +
+              "<strong>[ ARCHIVO 03: EL CASTILLO SALAZAR Y LA ISLA FORTIFICADA ]</strong><br>" +
+              "Cruzando las murallas del castillo de Ramón Salazar y los laboratorios militares del comandante renegado <strong>Jack Krauser</strong>, Leon desata tácticas de combate militar perfeccionadas: parries milimétricos de cuchillo, patadas giratorias y el apoyo clandestino del misterioso Luis Serra y la espía <strong>Ada Wong</strong> para neutralizar a Saddler y escapar en moto acuática al amanecer.",
+        tips: "El <mark>Cuchillo de Combate (L1)</mark> es tu mejor escudo: desvía hachas voladoras e incluso la hoja de una motosierra con el parry perfecto. Vigila siempre su barra de durabilidad y repáralo con el Buhonero.",
+        campaignTime: "15 - 18 HORAS",
+        platinumTime: "40 - 50 HORAS (Múltiples partidas en Profesional con Rango S+)",
+        engine: "RE ENGINE",
+        metaBuild: "Pistola Silver Ghost + Rifle de Cerrojo con Mira Térmica | Cuchillo Primitivo Indestructible",
+        arsenal: `<strong>[ VARIANTE 01 // SUPERVIVIENTE TÁCTICO - COMBATE Y CUCHILLO ]</strong><br>
+        • <strong>Armamento Principal:</strong> Pistola SG-09 R (Crítico x5 con mejora exclusiva) + Cuchillo de Combate militar.<br>
+        • <strong>Mecánica:</strong> Disparo certero a la cabeza o rodilla para aturdir -> Aproximación rápida -> Patada giratoria cuerpo a cuerpo para dispersar grupos.<br>
+        • <strong>Directiva Táctica:</strong> Remata con el cuchillo a los enemigos en el suelo antes de que la Plaga brote de su cuello.<br><br>
+        <strong>[ VARIANTE 02 // CONTENCIÓN PESADA DE HORDA ]</strong><br>
+        • <strong>Armamento:</strong> Escopeta Riot Gun + Fusil de Francotirador Stingray + Granadas Cegadoras.<br>
+        • <strong>Directiva Táctica:</strong> Una granada cegadora desintegra instantáneamente a cualquier cabeza mutada por la Plaga expuesta al aire libre.`,
+        threats: `<strong>[ CLASIFICACIÓN ALFA // JERARCAS DEL CULTO Y ARMAS BIOLÓGICAS ]</strong><br>
+        • <mark>Jack Krauser Mutado:</mark> Antiguo instructor de Leon con brazo de cuchilla blindada; exige duelos intensos de desvío con cuchillo en arenas cerradas.<br>
+        • <mark>El Verdugo (Guardián de Salazar):</mark> Bípede acorazado ultrarrápido; requiere derribar tanques de nitrógeno líquido para congelarlo antes de descargar munición pesada.<br>
+        • <mark>Osmund Saddler:</mark> Quimera parasitaria gigante con ojos vulnerables en las articulaciones de sus patas arácnidas.<br><br>
+        <strong>[ CLASIFICACIÓN BETA // GANADOS Y SUBESPECIES DE LABORATORIO ]</strong><br>
+        • <strong>Dr. Salvador (El de la Motosierra):</strong> Ataque de muerte instantánea; exige parry con cuchillo en el último segundo o escopetazo a quemarropa.<br>
+        • <strong>Regeneradores / Iron Maidens:</strong> Aberraciones con metabolismo inmortal; solo mueren destruyendo sus plagas internas visibles únicamente mediante mira térmica.`
     }
         };

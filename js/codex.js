@@ -114,3 +114,26 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+// Listener global de Hotkeys para codex.html
+document.addEventListener('keydown', (e) => {
+    // Bloquear hotkeys si el usuario está escribiendo en campos de texto
+    if (['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName)) return;
+
+    if (e.key === '1') {
+        e.preventDefault();
+        const tabLore = document.querySelector('[data-tab="lore"]');
+        if (tabLore) tabLore.click();
+    } else if (e.key === '2') {
+        e.preventDefault();
+        const tabArsenal = document.querySelector('[data-tab="arsenal"]');
+        if (tabArsenal) tabArsenal.click();
+    } else if (e.key === '3') {
+        e.preventDefault();
+        const tabThreats = document.querySelector('[data-tab="amenazas"]');
+        if (tabThreats) tabThreats.click();
+    } else if (e.key.toLowerCase() === 'f') {
+        e.preventDefault();
+        const favBtn = document.getElementById('btn-codex-fav');
+        if (favBtn) favBtn.click();
+    }
+});
